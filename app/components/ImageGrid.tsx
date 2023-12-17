@@ -17,8 +17,6 @@ export default function ImageGrid({ images }: { images: SearchResults[] }) {
           <div className="flex flex-col gap-2" key={idx}>
             {column.map((image) => (
               <CloduinaryImageWrapper
-                width={400}
-                height={300}
                 src={image.public_id}
                 sizes="100vw"
                 alt="Tina Hero Page"
