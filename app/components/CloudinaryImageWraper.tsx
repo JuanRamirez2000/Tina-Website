@@ -8,12 +8,14 @@ export default function CloduinaryImageWrapper({
   src,
   sizes,
   alt,
+  className,
 }: {
   width?: number | `${number}` | undefined;
   height?: number | `${number}` | undefined;
   src: string;
   sizes?: string | undefined;
   alt: string;
+  className?: string;
 }) {
   return (
     <CldImage
@@ -23,6 +25,7 @@ export default function CloduinaryImageWrapper({
       sizes={sizes}
       alt={alt}
       priority={true}
+      className={className}
     />
   );
 }
