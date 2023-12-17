@@ -14,7 +14,7 @@ import Link from "next/link";
 export default function Links() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-auto bg-gradient-to-br from-indigo-300 to-pink-300">
-      <div className="flex flex-col items-center justify-center w-full h-screen max-w-lg gap-4 overflow-auto min-h-fit">
+      <div className="flex flex-col items-center justify-center w-full h-screen max-w-lg gap-4 min-h-fit">
         <figure className="relative w-2/3 h-1/2 grow-0">
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
@@ -28,7 +28,7 @@ export default function Links() {
             Model with a passion for displaying beauty elegantly
           </p>
           <ul className="flex flex-col w-3/4 max-w-5xl gap-4 text-2x">
-            <li className="px-3 py-1  rounded-2xl bg-slate-100">
+            <li className="px-3 py-1 rounded-2xl bg-slate-100">
               <Link
                 href={"https://www.instagram.com/tinavivix/"}
                 className="flex flex-row items-center justify-between text-center"
