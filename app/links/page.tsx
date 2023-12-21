@@ -15,7 +15,7 @@ export default function Links() {
   return (
     <div className="flex flex-col items-center justify-center bg-gradient-to-br from-indigo-300 to-pink-300">
       <div className="flex flex-col items-center justify-center w-full max-w-lg min-h-screen gap-2 py-20 overflow-y-auto md:py-0 h-fit">
-        <figure className="relative w-2/3 h-96 grow-0">
+        <figure className="relative w-2/3 h-[30rem] grow-0">
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
             alt="Tina Hero Section photo"
@@ -24,12 +24,6 @@ export default function Links() {
         </figure>
         <div className="flex flex-col items-center w-full gap-5 h-fit">
           <h1 className="text-4xl font-semibold tracking-tight">Tina Dinh</h1>
-          {/* 
-
-<p className="text-lg text-center w-72">
-Model with a passion for displaying beauty elegantly
-</p>
-*/}
           <ul className="flex flex-col w-3/4 max-w-5xl gap-4 text-2xl">
             <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
@@ -48,9 +42,9 @@ Model with a passion for displaying beauty elegantly
                 </div>
               </Link>
             </li>
-            <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
+            <li className="px-3 py-1 rounded-2xl bg-slate-100">
               <Link
-                href={"https://tina-website-g52a.vercel.app/"}
+                href={"https://www.tinamodeling.net/links"}
                 className="flex flex-row items-center justify-between text-center "
                 aria-label="Instagram Link"
                 target="_blank"
@@ -62,7 +56,7 @@ Model with a passion for displaying beauty elegantly
                 <div className="flex flex-col grow">
                   <p className="text-xl font-semibold">Portfolio</p>
                   <p className="text-sm text-slate-600">
-                    Portfolio Site For All My Work
+                    Portfolio Coming Soon
                   </p>
                 </div>
               </Link>
