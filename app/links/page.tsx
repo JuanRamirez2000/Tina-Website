@@ -69,23 +69,6 @@ Model with a passion for displaying beauty elegantly
             </li>
             <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
-                href={"https://www.instagram.com/tinavivix/"}
-                className="flex flex-row items-center justify-between text-center "
-                aria-label="Instagram Link"
-                target="_blank"
-              >
-                <FontAwesomeIcon
-                  icon={faCalendarDays}
-                  className="w-10 h-10 p-1.5 rounded-xl bg-gradient-to-br from-rose-400 via-fuchsia-500 to-indigo-500 text-slate-50"
-                />
-                <div className="flex flex-col grow">
-                  <p className="text-xl font-semibold">Calendly</p>
-                  <p className="text-sm text-slate-600">Book Me!</p>
-                </div>
-              </Link>
-            </li>
-            <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
-              <Link
                 href={
                   "https://www.amazon.com/hz/wishlist/ls/229375X9AS1M9?ref_=wl_share"
                 }
@@ -105,7 +88,7 @@ Model with a passion for displaying beauty elegantly
             </li>
             <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
-                href={"https://www.instagram.com/tinavivix/"}
+                href={"https://www.buymeacoffee.com/vivixtina"}
                 className="flex flex-row items-center justify-between text-center "
                 aria-label="Instagram Link"
                 target="_blank"
@@ -115,7 +98,7 @@ Model with a passion for displaying beauty elegantly
                   className="w-10 h-10 p-1.5 rounded-xl bg-gradient-to-br from-cyan-200 to-cyan-400 text-slate-50"
                 />
                 <div className="flex flex-col grow">
-                  <p className="text-xl font-semibold">Come Buy Me A Coffee</p>
+                  <p className="text-xl font-semibold">Buy Me A Coffee</p>
                   <p className="text-sm text-slate-600">
                     Always Great To Support
                   </p>
