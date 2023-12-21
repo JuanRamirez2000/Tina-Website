@@ -100,7 +100,15 @@ export default function Links() {
               </Link>
             </li>
           </ul>
-          <h2 className="text-sm text-slate-700">Made with love by @Juan</h2>
+          <h2 className="text-sm text-slate-700">
+            Made with love by{" "}
+            <Link
+              href={"https://www.juanr.dev"}
+              className="text-blue-600 underline dark:text-blue-500 hover:no-underline"
+            >
+              @Juan
+            </Link>
+          </h2>
         </div>
       </div>
     </div>
