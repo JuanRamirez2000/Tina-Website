@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   return (
-    <div className=" drawer">
+    <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="flex flex-col drawer-content">
         {/* Navbar */}
-        <div className="w-full text-white bg-pink-300 navbar">
+        <div className="w-full px-5 text-white bg-pink-300 lg:px-10 navbar">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -17,10 +17,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <Bars3CenterLeftIcon className="w-8 h-8" />
             </label>
           </div>
-          <div className="flex-1 text-xl font-semibold navbar-start">
-            Tina Dinh
-          </div>
-          <div className="flex-none hidden lg:block navbar-end">
+          <div className="flex-1 text-xl font-semibold">Tina Dinh</div>
+          <div className="flex-none hidden lg:block">
             <ul className="text-lg menu menu-horizontal">
               <li>
                 <Link href={"/"}>Home</Link>
@@ -33,13 +31,17 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                   <summary>Gallery</summary>
                   <ul className="p-2 shadow menu dropdown-content z-[1] bg-pink-300 rounded-lg w-32 text-lg">
                     <li>
-                      <Link href={"/"}>Street</Link>
+                      <Link href={"/gallery?contentType=street"}>Street</Link>
                     </li>
                     <li>
-                      <Link href={"/"}>Portaits</Link>
+                      <Link href={"/gallery?contentType=portraits"}>
+                        Portaits
+                      </Link>
                     </li>
                     <li>
-                      <Link href={"/"}>Boudouir</Link>
+                      <Link href={"/gallery?contentType=boudoir"}>
+                        Boudouir
+                      </Link>
                     </li>
                   </ul>
                 </details>
@@ -74,10 +76,13 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <summary>Gallery</summary>
               <ul>
                 <li>
-                  <Link href={"/"}>Street</Link>
+                  <Link href={"/gallery?contentType=street"}>Street</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>Boudoir</Link>
+                  <Link href={"/gallery?contentType=portraits"}>Portaits</Link>
+                </li>
+                <li>
+                  <Link href={"/gallery?contentType=boudoir"}>Boudouir</Link>
                 </li>
               </ul>
             </details>
