@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "./(portfolioPage)/Navbar";
 
 export const metadata: Metadata = {
   title: "Tina Dinh Modeling",
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="w-screen min-h-fit">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

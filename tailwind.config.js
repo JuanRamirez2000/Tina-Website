@@ -2,5 +2,8 @@
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {},
-  plugins: [require("tailwindcss-hero-patterns")],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [],
+  },
 };

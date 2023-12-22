@@ -1,5 +1,5 @@
 import cloudinary from "cloudinary";
-import ImageGrid from "../components/ImageGrid";
+import ImageGrid from "../ImageGrid";
 
 export default async function Gallery() {
   const results = await cloudinary.v2.api.resources({
@@ -8,11 +8,5 @@ export default async function Gallery() {
     type: "upload",
     max_results: 100,
   });
-  return (
-    <main>
-      <div>
-        <ImageGrid images={results.resources} />
-      </div>
-    </main>
-  );
+  return <main></main>;
 }
