@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   return (
-    <div className="fixed drawer">
+    <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="flex flex-col drawer-content">
         {/* Navbar */}

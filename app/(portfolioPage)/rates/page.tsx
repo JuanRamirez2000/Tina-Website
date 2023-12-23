@@ -4,64 +4,62 @@ const HERO_PAGE_IMAGE_ID = "Tina/kzel2r28yhdyjahi2d51";
 
 export default function Rates() {
   return (
-    <main className="flex flex-col-reverse items-center justify-center w-full h-screen py-10 lg:flex-row lg:py-0">
-      <section className="flex flex-col items-center justify-center w-full h-1/2 lg:h-full lg:w-2/3">
-        <div className="flex flex-col items-center w-full max-w-3xl bg-green-200 h-3/4 ">
-          <div>
-            <h2>Services</h2>
-            <ul>
-              <li>
-                <p>
-                  I shoot mainly portraits, boudouir, lifestyle, street, and
-                  implied nude/creative implied nude.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Locations are within Inland Empire, Orange County, and DTLA.
-                  Shoots outside these areas can still be done but require more
-                  planning. We can always discuss locations and which would work
-                  best for us.
-                </p>
-              </li>
-              <li>
-                <p>
-                  I will come with my own basic hair and makeup look unlress
-                  requested. If you want a specific style please let me know
-                </p>
-              </li>
-              <li>
-                <p>
-                  I also contain a decently sized collection of lingerie, street
-                  wear, and accessories to use for the shoot. Please let me know
-                  if you want any specific look with appearal such as color,
-                  style, etc...
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2>Rates</h2>
-            <p>Rates cover all forms of photography</p>
-            <ul>
-              <li>
-                <h3>Basic shoot (1-3hrs):</h3>
-                <p>$75/hr</p>
-              </li>
-              <li>
-                <h3>Half Day (4-5hrs):</h3>
-                <p>$300 flat rate</p>
-              </li>
-              <li>
-                <h3>Full Day (6-8hrs):</h3>
-                <p>$500 flat rate</p>
-              </li>
-            </ul>
-          </div>
+    <main className="flex flex-col-reverse items-center justify-around w-full h-full gap-8 py-10 overflow-y-auto lg:flex-row lg:py-0">
+      <section className="flex flex-col items-center justify-center w-full px-8 min-h-fit lg:min-h-screen lg:w-2/3">
+        <div className="flex flex-col items-center w-full max-w-3xl gap-4 h-fit ">
+          <h2 className="text-3xl font-semibold">Services</h2>
+          <ul className="flex flex-col gap-4">
+            <li>
+              <p>
+                I shoot mainly portraits, boudouir, lifestyle, street, and
+                implied nude/creative implied nude.
+              </p>
+            </li>
+            <li>
+              <p>
+                Locations are within Inland Empire, Orange County, and LA County
+                (preferbly DTLA). Shoots outside these areas can still be done
+                but require more planning. We can always discuss locations and
+                which would work best for us. I do not travel.
+              </p>
+            </li>
+            <li>
+              <p>
+                I will come with my own basic hair and makeup look unless
+                requested. If you want a specific style please let me know and I
+                will see what I can do
+              </p>
+            </li>
+            <li>
+              <p>
+                I hold a decently sized collection of lingerie, street wear, and
+                accessories to use for the shoot. I do prefer to use clothes
+                that I have not used in shoots before, however this isn&apos;t
+                necessary. Please let me know if you want any specific look with
+                appearal such as color, style, etc...
+              </p>
+            </li>
+          </ul>
+          <h2 className="text-3xl font-semibold">Rates</h2>
+          <p>Rates cover all forms of photography</p>
+          <ul>
+            <li>
+              <h3>Basic shoot (1-3hrs):</h3>
+              <p>$75/hr</p>
+            </li>
+            <li>
+              <h3>Half Day (4-5hrs):</h3>
+              <p>$300 flat rate</p>
+            </li>
+            <li>
+              <h3>Full Day (6-8hrs):</h3>
+              <p>$500 flat rate</p>
+            </li>
+          </ul>
         </div>
       </section>
-      <div className="flex flex-col items-center justify-center w-full h-1/2 lg:h-full lg:w-1/3">
-        <figure className="relative w-3/4 h-full lg:w-full lg:h-full">
+      <div className="flex flex-col items-center justify-center w-full h-96 lg:h-full lg:w-1/3">
+        <figure className="relative w-3/4 h-full lg:w-full lg:h-full grow-0">
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
             alt="Tina Hero Section photo"
