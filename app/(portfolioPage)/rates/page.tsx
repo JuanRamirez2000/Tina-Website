@@ -1,6 +1,6 @@
 import CloduinaryImageWrapper from "@/app/components/CloudinaryImageWraper";
 
-const HERO_PAGE_IMAGE_ID = "Tina/kzel2r28yhdyjahi2d51";
+const RATES_IMAGE_ID = "Tina/kzel2r28yhdyjahi2d51";
 
 export default function Rates() {
   return (
@@ -17,10 +17,10 @@ export default function Rates() {
             </li>
             <li>
               <p>
-                Locations are within Inland Empire, Orange County, and LA County
-                (preferbly DTLA). Shoots outside these areas can still be done
-                but require more planning. We can always discuss locations and
-                which would work best for us. I do not travel.
+                Locations are within Inland Empire, Orange County, and LA
+                County. Shoots outside these areas can still be done but require
+                more planning. We can always discuss locations and which would
+                work best for us. I do not travel outside of SoCal at this time.
               </p>
             </li>
             <li>
@@ -42,7 +42,7 @@ export default function Rates() {
           </ul>
           <h2 className="text-3xl font-semibold">Rates</h2>
           <p>Rates cover all forms of photography</p>
-          <ul>
+          <ul className="flex flex-col gap-4">
             <li>
               <h3>Basic shoot (1-3hrs):</h3>
               <p>$75/hr</p>
@@ -61,7 +61,7 @@ export default function Rates() {
       <div className="flex flex-col items-center justify-center w-full h-96 lg:h-full lg:w-1/3">
         <figure className="relative w-3/4 h-full lg:w-full lg:h-full grow-0">
           <CloduinaryImageWrapper
-            src={HERO_PAGE_IMAGE_ID}
+            src={RATES_IMAGE_ID}
             alt="Tina Hero Section photo"
             className="object-cover rounded-lg lg:rounded-none"
           />
