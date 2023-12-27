@@ -24,14 +24,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 <Link href={"/"}>Home</Link>
               </li>
               <li className="btn btn-ghost hover:bg-sky-400 ">
-                <div className="dropdown dropdown-bottom">
-                  <div tabIndex={0} role="button">
-                    Gallery
-                  </div>
-                  <ul
-                    tabIndex={0}
-                    className="p-2 shadow menu dropdown-content z-[1] text-slate-700 bg-slate-300 rounded-box w-32 "
-                  >
+                <details>
+                  <summary>Gallery</summary>
+                  <ul className="z-10 w-32 p-2 shadow text-slate-700 bg-slate-300 rounded-box">
                     <li className="transition-all rounded-lg hover:scale-110 hover:bg-sky-400">
                       <Link href={"/gallery?contentType=street"}>Street</Link>
                     </li>
@@ -46,7 +41,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </details>
               </li>
               <li className="btn btn-ghost hover:bg-sky-400">
                 <Link href={"/rates"}>Rates</Link>

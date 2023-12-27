@@ -1,12 +1,18 @@
 import cloudinary from "cloudinary";
-import ImageGrid from "../ImageGrid";
+import ImageGrid from "./ImageGrid";
 
 export default async function Gallery() {
   const results = await cloudinary.v2.api.resources({
     resource_type: "image",
-    prefix: "Tina/",
+    prefix: "Tina",
     type: "upload",
-    max_results: 100,
+    max_results: 10,
   });
-  return <main></main>;
+
+  if (!results) return <h1>Loading...</h1>;
+  return (
+    <main className="flex flex-col items-center w-full h-screen ">
+      <ImageGrid images={results.resources} />
+    </main>
+  );
 }

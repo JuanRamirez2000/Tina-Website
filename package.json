@@ -16,11 +16,13 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@heroicons/react": "^2.1.1",
     "cloudinary": "^1.41.0",
+    "flowbite": "^2.2.1",
     "framer-motion": "^10.16.16",
     "next": "14.0.1",
     "next-cloudinary": "^5.2.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-photo-album": "^2.3.0",
     "tailwindcss-hero-patterns": "^0.1.2"
   },
   "devDependencies": {
