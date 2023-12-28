@@ -63,6 +63,7 @@ export default function Rates() {
           <CloduinaryImageWrapper
             src={RATES_IMAGE_ID}
             alt="Tina Hero Section photo"
+            fill={true}
             className="object-cover rounded-lg lg:rounded-none"
           />
         </figure>

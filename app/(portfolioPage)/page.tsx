@@ -37,6 +37,7 @@ export default function Home() {
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
             alt="Tina Hero Section photo"
+            fill={true}
             className="object-cover rounded-lg lg:rounded-none"
           />
         </figure>
