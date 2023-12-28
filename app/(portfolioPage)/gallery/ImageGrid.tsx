@@ -1,7 +1,5 @@
 import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 
-const MAX_COLS = 4;
-
 export type SearchResults = {
   public_id: string;
   height: number;
@@ -18,7 +16,7 @@ export default function ImageGrid({ images }: { images: SearchResults[] }) {
           width={image.width}
           key={image.public_id}
           alt="Tina Hero Page"
-          className="object-cover my-2 rounded-xl aspect-auto"
+          className="object-cover my-6 transition-all shadow-lg cursor-pointer rounded-xl aspect-auto hover:scale-105"
         />
       ))}
     </div>

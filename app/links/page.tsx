@@ -15,6 +15,7 @@ export default function Links() {
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
             alt="Tina Hero Section photo"
+            fill={true}
             className="object-cover rounded-xl"
           />
         </figure>

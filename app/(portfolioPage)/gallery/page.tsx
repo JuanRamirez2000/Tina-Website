@@ -6,7 +6,7 @@ export default async function Gallery() {
     resource_type: "image",
     prefix: "Tina",
     type: "upload",
-    max_results: 10,
+    max_results: 100,
   });
 
   if (!results) return <h1>Loading...</h1>;
