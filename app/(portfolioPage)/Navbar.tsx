@@ -1,94 +1,95 @@
-import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
+"use client";
+
+import { Menu } from "@headlessui/react";
+import {
+  Bars3Icon,
+  BellIcon,
+  XMarkIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export default function Navbar({ children }: { children: React.ReactNode }) {
+export default function Navbar({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-      <div className="flex flex-col drawer-content">
-        {/* Navbar */}
-        <div className="w-full px-5 text-slate-700 bg-slate-300 lg:px-10 navbar">
-          <div className="flex-none lg:hidden">
-            <label
-              htmlFor="my-drawer-3"
-              aria-label="open sidebar"
-              className="btn btn-square btn-ghost"
+    <nav className="flex flex-row items-center justify-center p-4 px-6 text-slate-700 bg-slate-300">
+      <div className="flex-grow">
+        <p className="text-xl font-semibold tracking-tight">Tina Dinh</p>
+      </div>
+      <ul className="flex-row hidden gap-6 px-10 lg:flex">
+        <li className="px-3.5 py-2 rounded-lg hover:bg-sky-400">
+          <Link href={"/"}>Home</Link>
+        </li>
+        <li className="px-3.5 py-2 rounded-lg hover:bg-sky-400">
+          <Menu as="div" className="relative">
+            <Menu.Button className="inline-flex items-center justify-center w-full gap-1">
+              Gallery <ChevronDownIcon className="w-4 h-4" />
+            </Menu.Button>
+            <Menu.Items className="absolute right-0 z-20 w-32 mt-2 origin-top-right bg-white rounded-md shadow-lg">
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=street"}
+                  className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+                >
+                  Street
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=portait"}
+                  className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+                >
+                  Portait
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=boudoir"}
+                  className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+                >
+                  Boudoir
+                </Link>
+              </Menu.Item>
+            </Menu.Items>
+          </Menu>
+        </li>
+        <li className="px-3.5 py-2 rounded-lg hover:bg-sky-400">
+          <Link href={"/rates"}>Rates</Link>
+        </li>
+        <li className="px-3.5 py-2 rounded-lg hover:bg-sky-400">
+          <Link href={"/links"}>Links</Link>
+        </li>
+      </ul>
+      <Menu as="div" className=" lg:hidden">
+        <Menu.Button>
+          <Bars3Icon className="w-7 h-7" />
+        </Menu.Button>
+        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen bg-white rounded-md shadow-lg">
+          <Menu.Item>
+            <Link
+              href={"/"}
+              className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
             >
-              <Bars3CenterLeftIcon className="w-8 h-8" />
-            </label>
-          </div>
-          <div className="flex-1 text-xl font-semibold">Tina Dinh</div>
-          <div className="flex-none hidden lg:block">
-            <ul className="text-lg menu menu-horizontal">
-              <li className="btn btn-ghost hover:bg-sky-400">
-                <Link href={"/"}>Home</Link>
-              </li>
-              <li className="btn btn-ghost hover:bg-sky-400 ">
-                <details>
-                  <summary>Gallery</summary>
-                  <ul className="z-10 w-32 p-2 shadow text-slate-700 bg-slate-300 rounded-box">
-                    <li className="transition-all rounded-lg hover:scale-110 hover:bg-sky-400">
-                      <Link href={"/gallery?contentType=street"}>Street</Link>
-                    </li>
-                    <li className="transition-all rounded-lg hover:scale-110 hover:bg-sky-400">
-                      <Link href={"/gallery?contentType=portraits"}>
-                        Portaits
-                      </Link>
-                    </li>
-                    <li className="transition-all rounded-lg hover:scale-110 hover:bg-sky-400">
-                      <Link href={"/gallery?contentType=boudoir"}>
-                        Boudouir
-                      </Link>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li className="btn btn-ghost hover:bg-sky-400">
-                <Link href={"/rates"}>Rates</Link>
-              </li>
-              <li className="btn btn-ghost hover:bg-sky-400">
-                <Link href={"/links"}>Links</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {children}
-      </div>
-      {/* Side Navigation */}
-      <div className="drawer-side">
-        <label
-          htmlFor="my-drawer-3"
-          aria-label="close sidebar"
-          className="drawer-overlay"
-        ></label>
-        <ul className="min-h-full p-4 text-lg text-slate-700 bg-slate-300 menu w-72">
-          <li>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li>
-            <details open>
-              <summary>Gallery</summary>
-              <ul>
-                <li>
-                  <Link href={"/gallery?contentType=street"}>Street</Link>
-                </li>
-                <li>
-                  <Link href={"/gallery?contentType=portraits"}>Portaits</Link>
-                </li>
-                <li>
-                  <Link href={"/gallery?contentType=boudoir"}>Boudouir</Link>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <Link href={"/rates"}>Rates</Link>
-          </li>
-          <li>
-            <Link href={"/links"}>Links</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+              Home
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link
+              href={"/rates"}
+              className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+            >
+              Rates
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link
+              href={"/links"}
+              className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+            >
+              Links
+            </Link>
+          </Menu.Item>
+        </Menu.Items>
+      </Menu>
+    </nav>
   );
 }
