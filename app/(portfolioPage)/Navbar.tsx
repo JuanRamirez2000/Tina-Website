@@ -1,17 +1,12 @@
 "use client";
 
 import { Menu } from "@headlessui/react";
-import {
-  Bars3Icon,
-  BellIcon,
-  XMarkIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export default function Navbar({ children }: { children?: React.ReactNode }) {
+export default function Navbar() {
   return (
-    <nav className="flex flex-row items-center justify-center p-4 px-6 text-slate-700 bg-slate-300">
+    <nav className="flex flex-row items-center justify-center p-4 px-6 text-zinc-200 bg-zinc-950">
       <div className="flex-grow">
         <p className="text-xl font-semibold tracking-tight">Tina Dinh</p>
       </div>
@@ -24,7 +19,7 @@ export default function Navbar({ children }: { children?: React.ReactNode }) {
             <Menu.Button className="inline-flex items-center justify-center w-full gap-1">
               Gallery <ChevronDownIcon className="w-4 h-4" />
             </Menu.Button>
-            <Menu.Items className="absolute right-0 z-20 w-32 mt-2 origin-top-right bg-white rounded-md shadow-lg">
+            <Menu.Items className="absolute right-0 z-20 w-32 mt-2 origin-top-right rounded-md shadow-lg text-zinc-200 bg-zinc-950">
               <Menu.Item>
                 <Link
                   href={"/gallery?contentType=street"}
@@ -59,11 +54,11 @@ export default function Navbar({ children }: { children?: React.ReactNode }) {
           <Link href={"/links"}>Links</Link>
         </li>
       </ul>
-      <Menu as="div" className=" lg:hidden">
+      <Menu as="div" className="lg:hidden">
         <Menu.Button>
           <Bars3Icon className="w-7 h-7" />
         </Menu.Button>
-        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen bg-white rounded-md shadow-lg">
+        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen rounded-md shadow-lg text-zinc-200 bg-zinc-950">
           <Menu.Item>
             <Link
               href={"/"}

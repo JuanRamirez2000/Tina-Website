@@ -3,7 +3,7 @@ import CloduinaryImageWrapper from "../components/CloudinaryImageWraper";
 const HERO_PAGE_IMAGE_ID = "Tina/sh194qz8a88nyu0mkay6";
 export default function Home() {
   return (
-    <main className="flex flex-col-reverse items-center justify-around w-full h-screen lg:flex-row">
+    <main className="flex flex-col-reverse items-center justify-around w-full h-fit lg:flex-row">
       <section className="flex flex-col items-center justify-center w-full px-8 min-h-fit lg:min-h-screen lg:w-2/3">
         <div className="flex flex-col items-center w-full max-w-3xl gap-4 h-fit ">
           <h2 className="text-3xl font-semibold">Tina Dinh</h2>
@@ -32,8 +32,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <div className="flex flex-col items-center justify-center w-full h-96 lg:h-full lg:w-1/3">
-        <figure className="relative w-3/4 h-full lg:w-full lg:h-full grow-0">
+      <div className="flex flex-col items-center justify-center w-full h-96 lg:h-screen lg:w-1/3">
+        <figure className="relative w-3/4 h-full lg:w-full grow-0">
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
             alt="Tina Hero Section photo"
