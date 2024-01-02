@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { useRouter } from "next/navigation";
 
-export default function PhotoModal({ asset_id }: { asset_id: string }) {
-  console.log(asset_id);
+export default function PhotoModal() {
   const router = useRouter();
 
   return (
