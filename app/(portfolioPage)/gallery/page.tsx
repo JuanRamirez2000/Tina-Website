@@ -1,18 +1,25 @@
 import cloudinary from "cloudinary";
 import ImageGrid from "./ImageGrid";
 
-export default async function Gallery() {
-  const results = await cloudinary.v2.api.resources({
-    resource_type: "image",
-    prefix: "Tina",
-    type: "upload",
-    max_results: 100,
-  });
+export default async function Gallery({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const contentType = searchParams.contentType;
+  const { resources } = await cloudinary.v2.api.resources_by_tag(
+    contentType as string,
+    {
+      max_results: 200,
+    }
+  );
 
-  if (!results) return <h1>Loading...</h1>;
+  if (!resources) return <h1>Loading...</h1>;
+  const shuffledResources = resources.sort((a, b) => 0.5 - Math.random());
+
   return (
     <main className="flex flex-col items-center w-full h-screen ">
-      <ImageGrid images={results.resources} />
+      <ImageGrid images={shuffledResources} />
     </main>
   );
 }

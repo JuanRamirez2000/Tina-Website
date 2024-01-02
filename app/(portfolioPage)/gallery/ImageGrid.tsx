@@ -1,23 +1,24 @@
+import Link from "next/link";
 import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
+import { ResourceApiResponse } from "cloudinary";
 
-export type SearchResults = {
-  public_id: string;
-  height: number;
-  width: number;
-};
-
-export default function ImageGrid({ images }: { images: SearchResults[] }) {
+export default function ImageGrid({
+  images,
+}: {
+  images: ResourceApiResponse["resources"];
+}) {
   return (
-    <div className="w-[90%] h-fit columns-1 md:columns-2 lg:columns-3 xl:columns-4">
+    <div className="w-[90%] h-fit columns-1 md:columns-2 lg:columns-3 2xl:columns-5">
       {images.map((image) => (
-        <CloduinaryImageWrapper
-          src={image.public_id}
-          height={image.height}
-          width={image.width}
-          key={image.public_id}
-          alt="Tina Hero Page"
-          className="object-cover my-6 transition-all shadow-lg cursor-pointer rounded-xl aspect-auto hover:scale-105"
-        />
+        <Link href={`/photo/${image.asset_id}`} key={image.asset_id}>
+          <CloduinaryImageWrapper
+            src={image.public_id}
+            height={image.height}
+            width={image.width}
+            alt="Tina Hero Page"
+            className="object-cover my-6 transition-all shadow-lg cursor-pointer rounded-xl aspect-auto hover:scale-105"
+          />
+        </Link>
       ))}
     </div>
   );
