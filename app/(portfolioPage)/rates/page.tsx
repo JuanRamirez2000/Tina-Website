@@ -4,11 +4,11 @@ const RATES_IMAGE_ID = "Tina/kzel2r28yhdyjahi2d51";
 
 export default function Rates() {
   return (
-    <main className="flex flex-col-reverse items-center justify-around w-full py-20 h-fit lg:flex-row">
-      <section className="flex flex-col items-center justify-center w-full px-8 min-h-fit lg:min-h-screen lg:w-2/3">
-        <div className="flex flex-col items-center w-full max-w-3xl gap-4">
+    <main className="flex flex-col-reverse items-center justify-around w-full py-4 h-fit lg:h-full lg:py-0 lg:flex-row">
+      <section className="flex flex-col items-center justify-center w-full min-h-fit lg:h-full lg:w-2/3">
+        <div className="flex flex-col items-center w-full max-w-3xl gap-4 h-fit ">
           <h2 className="text-3xl font-semibold">Services</h2>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 px-4">
             <li>
               <p>
                 I shoot mainly portraits, boudouir, lifestyle, street, and
@@ -58,7 +58,7 @@ export default function Rates() {
           </ul>
         </div>
       </section>
-      <div className="flex flex-col items-center justify-center w-full h-96 lg:h-screen lg:w-1/3">
+      <div className="flex flex-col items-center justify-center w-full h-96 lg:h-full lg:w-1/3">
         <figure className="relative w-3/4 h-full lg:w-full grow-0">
           <CloduinaryImageWrapper
             src={RATES_IMAGE_ID}

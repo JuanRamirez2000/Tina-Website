@@ -10,8 +10,13 @@ export default function Layout({
 }) {
   return (
     <>
-      <Navbar />
-      {children}
+      <div className="w-screen h-screen">
+        <div className="h-[7%] w-full">
+          <Navbar />
+        </div>
+
+        <div className="h-[93%] w-full">{children}</div>
+      </div>
       {photoModal}
     </>
   );

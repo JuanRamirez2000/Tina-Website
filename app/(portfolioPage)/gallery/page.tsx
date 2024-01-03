@@ -15,10 +15,10 @@ export default async function Gallery({
   );
 
   if (!resources) return <h1>Loading...</h1>;
-  const shuffledResources = resources.sort((a, b) => 0.5 - Math.random());
+  const shuffledResources = resources.sort(() => 0.5 - Math.random());
 
   return (
-    <main className="flex flex-col items-center w-full h-screen ">
+    <main className="flex flex-col items-center w-full h-full lg:py-4">
       <ImageGrid images={shuffledResources} />
     </main>
   );
