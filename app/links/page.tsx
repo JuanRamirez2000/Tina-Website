@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export default function Links() {
   return (
-    <div className="flex flex-col items-center justify-center bg-gradient-to-br from-indigo-300 to-pink-300">
-      <div className="flex flex-col items-center justify-center w-full max-w-lg min-h-screen gap-2 py-20 overflow-y-auto md:py-0 h-fit">
+    <main className="flex flex-col items-center justify-center bg-gradient-to-br from-indigo-300 to-pink-300">
+      <section className="flex flex-col items-center justify-center w-full max-w-lg min-h-screen gap-2 py-20 overflow-y-auto md:py-0 h-fit">
         <figure className="relative w-2/3 h-[30rem] grow-0">
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
@@ -107,7 +107,7 @@ export default function Links() {
             </Link>
           </h2>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

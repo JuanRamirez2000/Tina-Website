@@ -4,7 +4,7 @@ const RATES_IMAGE_ID = "Tina/kzel2r28yhdyjahi2d51";
 
 export default function Rates() {
   return (
-    <main className="flex flex-col-reverse items-center justify-around w-full h-fit lg:flex-row">
+    <main className="flex flex-col-reverse items-center justify-around w-full py-20 h-fit lg:flex-row">
       <section className="flex flex-col items-center justify-center w-full px-8 min-h-fit lg:min-h-screen lg:w-2/3">
         <div className="flex flex-col items-center w-full max-w-3xl gap-4">
           <h2 className="text-3xl font-semibold">Services</h2>
