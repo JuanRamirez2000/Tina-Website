@@ -16,7 +16,7 @@ export default function ImageGrid({
             height={image.height}
             width={image.width}
             alt="Tina Hero Page"
-            className="object-cover my-6 transition-all shadow-lg cursor-pointer rounded-xl aspect-auto hover:scale-105"
+            className="my-6 transition-all shadow-lg cursor-pointer rounded-xl hover:scale-105 "
           />
         </Link>
       ))}

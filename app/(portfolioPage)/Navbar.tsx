@@ -61,7 +61,7 @@ export default function Navbar() {
         <Menu.Button>
           <Bars3Icon className="w-7 h-7" />
         </Menu.Button>
-        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen px-4 rounded-md shadow-lg text-zinc-200 bg-zinc-950">
+        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen pl-4 rounded-md shadow-lg text-zinc-200 bg-zinc-950">
           <Menu.Item>
             <Link
               href={"/"}

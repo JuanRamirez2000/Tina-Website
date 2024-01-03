@@ -10,12 +10,12 @@ export default function Layout({
 }) {
   return (
     <>
-      <div className="w-screen h-screen">
-        <div className="h-[7%] w-full">
+      <div className="w-full h-screen">
+        <div className="w-full h-fit">
           <Navbar />
         </div>
 
-        <div className="h-[93%] w-full">{children}</div>
+        <div className="w-full h-full">{children}</div>
       </div>
       {photoModal}
     </>
