@@ -3,8 +3,11 @@
 import { Menu } from "@headlessui/react";
 import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [subMenuVisable, setSubMenuVisable] = useState<boolean>(false);
+
   return (
     <nav className="flex flex-row items-center justify-center p-4 px-6 text-zinc-200 bg-zinc-950">
       <div className="flex-grow">
@@ -58,19 +61,58 @@ export default function Navbar() {
         <Menu.Button>
           <Bars3Icon className="w-7 h-7" />
         </Menu.Button>
-        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen rounded-md shadow-lg text-zinc-200 bg-zinc-950">
+        <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen px-4 rounded-md shadow-lg text-zinc-200 bg-zinc-950">
           <Menu.Item>
             <Link
               href={"/"}
-              className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+              className="flex items-center w-full px-2 py-2 text-lg rounded-md"
             >
               Home
             </Link>
           </Menu.Item>
           <Menu.Item>
+            <button
+              className="flex items-center w-full px-2 py-2 text-lg rounded-md"
+              onClick={(e) => {
+                e.preventDefault();
+                setSubMenuVisable((prev) => !prev);
+              }}
+            >
+              Gallery <ChevronDownIcon className="w-6 h-6" />
+            </button>
+          </Menu.Item>
+          {subMenuVisable && (
+            <>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=street"}
+                  className="flex items-center w-full px-2 py-2 ml-4 text-lg rounded-md"
+                >
+                  Street
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=portait"}
+                  className="flex items-center w-full px-2 py-2 ml-4 text-lg rounded-md"
+                >
+                  Portait
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=boudoir"}
+                  className="flex items-center w-full px-2 py-2 ml-4 text-lg rounded-md"
+                >
+                  Boudoir
+                </Link>
+              </Menu.Item>
+            </>
+          )}
+          <Menu.Item>
             <Link
               href={"/rates"}
-              className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+              className="flex items-center w-full px-2 py-2 text-lg rounded-md"
             >
               Rates
             </Link>
@@ -78,7 +120,7 @@ export default function Navbar() {
           <Menu.Item>
             <Link
               href={"/links"}
-              className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+              className="flex items-center w-full px-2 py-2 text-lg rounded-md"
             >
               Links
             </Link>
