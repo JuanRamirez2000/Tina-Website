@@ -41,7 +41,7 @@ export default function Links() {
             </li>
             <li className="px-3 py-1 rounded-2xl bg-slate-100">
               <Link
-                href={"https://www.tinamodeling.net/links"}
+                href={"https://www.tinamodeling.net"}
                 className="flex flex-row items-center justify-between text-center "
                 aria-label="Instagram Link"
                 target="_blank"
