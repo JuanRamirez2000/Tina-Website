@@ -15,21 +15,22 @@ export default function Home() {
             ullam voluptas libero repellat sunt. Inventore asperiores assumenda
             temporibus quisquam facilis.
           </p>
-          <h2 className="text-3xl font-semibold">Stats</h2>
-          <ul className="flex flex-row gap-4">
-            <li>
-              <h3>Height</h3>
-              <p>5&apos;4&quot;</p>
-            </li>
-            <li>
-              <h3>Bust</h3>
-              <p>35&apos;</p>
-            </li>
-            <li>
-              <h3>Waist</h3>
-              <p>28&apos;</p>
-            </li>
-          </ul>
+          <div className="flex flex-col items-center justify-center w-64 h-32 p-4 rounded-lg bg-gradient-to-br from-indigo-300 to-pink-300">
+            <ul className="flex flex-row gap-6 ">
+              <li>
+                <h3 className="text-sm font-semibold">Height</h3>
+                <p className="text-3xl font-bold">5&apos;4&quot;</p>
+              </li>
+              <li>
+                <h3 className="text-sm font-semibold ">Bust</h3>
+                <p className="text-3xl font-bold">35&apos;</p>
+              </li>
+              <li>
+                <h3 className="text-sm font-semibold ">Waist</h3>
+                <p className="text-3xl font-bold">28&apos;</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <div className="flex flex-col items-center justify-center w-full h-96 lg:h-full lg:w-1/3">

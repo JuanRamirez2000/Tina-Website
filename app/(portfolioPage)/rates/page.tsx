@@ -42,18 +42,18 @@ export default function Rates() {
           </ul>
           <h2 className="text-3xl font-semibold">Rates</h2>
           <p>Rates cover all forms of photography</p>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 p-6 rounded-lg bg-gradient-to-br from-indigo-300 to-pink-300">
             <li>
-              <h3>Basic shoot (1-3hrs):</h3>
-              <p>$75/hr</p>
+              <h3 className="text-sm font-semibold">Basic shoot (1-3hrs):</h3>
+              <p className="text-2xl font-bold">$75/hr</p>
             </li>
             <li>
-              <h3>Half Day (4-5hrs):</h3>
-              <p>$300 flat rate</p>
+              <h3 className="text-sm font-semibold">Half Day (4-5hrs):</h3>
+              <p className="text-2xl font-bold">$300 flat rate</p>
             </li>
             <li>
-              <h3>Full Day (6-8hrs):</h3>
-              <p>$500 flat rate</p>
+              <h3 className="text-sm font-semibold">Full Day (6-8hrs):</h3>
+              <p className="text-2xl font-bold">$500 flat rate</p>
             </li>
           </ul>
         </div>
