@@ -39,7 +39,7 @@ export default function Links() {
                 </div>
               </Link>
             </li>
-            <li className="px-3 py-1 rounded-2xl bg-slate-100">
+            <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
                 href={"https://www.tinamodeling.net"}
                 className="flex flex-row items-center justify-between text-center "
