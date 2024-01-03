@@ -9,7 +9,7 @@ export default function Navbar() {
   const [subMenuVisable, setSubMenuVisable] = useState<boolean>(false);
 
   return (
-    <nav className="flex flex-row items-center justify-center w-full h-full p-4 px-6 text-zinc-200 bg-zinc-950">
+    <nav className="fixed top-0 z-10 flex flex-row items-center justify-center w-full p-4 px-6 text-zinc-200 bg-zinc-950">
       <div className="flex-grow">
         <p className="text-xl font-semibold tracking-tight">Tina Dinh</p>
       </div>
