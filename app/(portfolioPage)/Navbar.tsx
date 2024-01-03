@@ -56,6 +56,9 @@ export default function Navbar() {
         <li className="px-3.5 py-2 rounded-lg hover:bg-sky-400">
           <Link href={"/links"}>Links</Link>
         </li>
+        <li className="px-3.5 py-2 rounded-lg hover:bg-sky-400">
+          <Link href={"https://www.instagram.com/tinavivix/"}>Contact</Link>
+        </li>
       </ul>
       <Menu as="div" className="lg:hidden">
         <Menu.Button>
@@ -123,6 +126,14 @@ export default function Navbar() {
               className="flex items-center w-full px-2 py-2 text-lg rounded-md"
             >
               Links
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link
+              href={"https://www.instagram.com/tinavivix/"}
+              className="flex items-center w-full px-2 py-2 text-lg rounded-md"
+            >
+              Contact
             </Link>
           </Menu.Item>
         </Menu.Items>
