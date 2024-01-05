@@ -41,6 +41,14 @@ export default function Navbar() {
               </Menu.Item>
               <Menu.Item>
                 <Link
+                  href={"/gallery?contentType=studio"}
+                  className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
+                >
+                  Studio
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
                   href={"/gallery?contentType=boudoir"}
                   className="flex items-center w-full px-2 py-2 rounded-md hover:bg-sky-400"
                 >
@@ -100,6 +108,14 @@ export default function Navbar() {
                   className="flex items-center w-full px-2 py-2 ml-4 text-lg rounded-md"
                 >
                   Portait
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=studio"}
+                  className="flex items-center w-full px-2 py-2 ml-4 text-lg rounded-md"
+                >
+                  Studio
                 </Link>
               </Menu.Item>
               <Menu.Item>
