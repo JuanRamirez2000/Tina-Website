@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CloduinaryImageWrapper from "../components/CloudinaryImageWraper";
 
-const HERO_PAGE_IMAGE_ID = "Tina/sh194qz8a88nyu0mkay6";
+const HERO_PAGE_IMAGE_ID = "tina-website-39_ncgjkh";
 export default function Home() {
   return (
     <main className="flex flex-col-reverse items-center justify-around w-full py-24 h-fit lg:h-full lg:py-0 lg:flex-row">
@@ -26,7 +26,7 @@ export default function Home() {
               </li>
               <li>
                 <h3 className="text-sm font-semibold ">Bust</h3>
-                <p className="text-3xl font-bold">35&quot;</p>
+                <p className="text-3xl font-bold">34&quot;</p>
               </li>
               <li>
                 <h3 className="text-sm font-semibold ">Waist</h3>
