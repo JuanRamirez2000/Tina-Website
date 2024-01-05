@@ -23,11 +23,11 @@ export default function Home() {
               </li>
               <li>
                 <h3 className="text-sm font-semibold ">Bust</h3>
-                <p className="text-3xl font-bold">35&apos;</p>
+                <p className="text-3xl font-bold">35&quot;</p>
               </li>
               <li>
                 <h3 className="text-sm font-semibold ">Waist</h3>
-                <p className="text-3xl font-bold">28&apos;</p>
+                <p className="text-3xl font-bold">28&quot;</p>
               </li>
             </ul>
           </div>

@@ -11,23 +11,25 @@ export default function Rates() {
           <ul className="flex flex-col gap-4 px-4">
             <li>
               <p>
-                I shoot mainly portraits, boudouir, lifestyle, street, and
-                implied nude/creative implied nude.
+                I shoot mainly portraits, boudoir, lifestyle, street, and
+                implied nude.
               </p>
             </li>
             <li>
               <p>
-                Locations are within Inland Empire, Orange County, and LA
-                County. Shoots outside these areas can still be done but require
-                more planning. We can always discuss locations and which would
-                work best for us. I do not travel outside of SoCal at this time.
+                Locations I am willing to shoot in are within Inland Empire,
+                Orange County, and Los Angeles County. Shoots outside these
+                areas can still be done but require more planning. If you are
+                from areas further away we can discuss and try to find a middle
+                ground to shoot in. I do not travel outside of SoCal at this
+                time.
               </p>
             </li>
             <li>
               <p>
-                I will come with my own basic hair and makeup look unless
-                requested. If you want a specific style please let me know and I
-                will see what I can do
+                I will come with my own basic hair, makeup, and nails look
+                unless requested. If you want a specific style please let me
+                know and I will see what I can do.
               </p>
             </li>
             <li>
@@ -36,12 +38,11 @@ export default function Rates() {
                 accessories to use for the shoot. I do prefer to use clothes
                 that I have not used in shoots before, however this isn&apos;t
                 necessary. Please let me know if you want any specific look with
-                appearal such as color, style, etc...
+                appearal such as color, style, material, etc...
               </p>
             </li>
           </ul>
           <h2 className="text-3xl font-semibold">Rates</h2>
-          <p>Rates cover all forms of photography</p>
           <ul className="flex flex-col gap-4 p-6 rounded-lg bg-gradient-to-br from-indigo-300 to-pink-300">
             <li>
               <h3 className="text-sm font-semibold">Basic shoot (1-3hrs):</h3>
