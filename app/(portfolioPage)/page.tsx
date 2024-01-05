@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CloduinaryImageWrapper from "../components/CloudinaryImageWraper";
 
 const HERO_PAGE_IMAGE_ID = "Tina/sh194qz8a88nyu0mkay6";
@@ -8,12 +9,14 @@ export default function Home() {
         <div className="flex flex-col items-center w-full max-w-3xl gap-4 h-fit ">
           <h2 className="text-3xl font-semibold">Tina Dinh</h2>
           <p className="max-w-xl px-4 text-center lg:text-left">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            quas quam iste commodi pariatur assumenda, distinctio quasi!
-            Cupiditate totam incidunt laborum ab aperiam illum, laboriosam
-            recusandae dolor, vel, corporis modi quo omnis atque voluptatibus
-            ullam voluptas libero repellat sunt. Inventore asperiores assumenda
-            temporibus quisquam facilis.
+            Hey! I&apos;m Tina! <br /> A full time student and hobbyist model.{" "}
+            <br /> I got into modeling as an attempt to show natural beauty and
+            elegance through many forms of media. My main focus right now is
+            photoshoots, however I may be open to video shoots at some point.{" "}
+            <br /> Most of my work revolves around Street, Portait, and Boudoir
+            modeling, however I am open to other forms of modeling if the time
+            and shoot fit my style. <br /> This site was made to showcase my
+            work. Lets shoot sometime!
           </p>
           <div className="flex flex-col items-center justify-center w-64 h-32 p-4 rounded-lg bg-gradient-to-br from-indigo-300 to-pink-300">
             <ul className="flex flex-row gap-6 ">
@@ -31,6 +34,15 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <h2 className="text-sm text-slate-700">
+            Made with love by{" "}
+            <Link
+              href={"https://www.juanr.dev"}
+              className="text-blue-600 underline dark:text-blue-500 hover:no-underline"
+            >
+              @Juan
+            </Link>
+          </h2>
         </div>
       </section>
       <div className="flex flex-col items-center justify-center w-full h-96 lg:h-full lg:w-1/3">
