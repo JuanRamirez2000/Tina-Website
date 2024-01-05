@@ -18,7 +18,7 @@ export default async function Gallery({
   const shuffledResources = resources.sort(() => 0.5 - Math.random());
 
   return (
-    <main className="flex flex-col items-center h-full max-w-screen-xl py-16 lg:py-24 w-fit">
+    <main className="flex flex-col items-center h-full py-16 lg:py-24 w-fit">
       <ImageGrid images={shuffledResources} />
     </main>
   );

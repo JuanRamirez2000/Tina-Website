@@ -10,7 +10,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <div className="w-full h-screen">
+      <div className="relative w-full h-screen">
         <div className="w-full h-fit">
           <Navbar />
         </div>
