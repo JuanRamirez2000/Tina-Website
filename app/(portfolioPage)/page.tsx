@@ -8,7 +8,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center w-full min-h-fit lg:h-full lg:w-2/3">
         <div className="flex flex-col items-center w-full max-w-3xl gap-4 h-fit ">
           <h2 className="text-3xl font-semibold">Tina Dinh</h2>
-          <p className="max-w-xl px-4 text-left text-center">
+          <p className="max-w-xl px-4 text-center">
             Hey! I&apos;m Tina! <br /> A full time student and hobbyist model.{" "}
             <br /> I got into modeling as an attempt to show natural beauty and
             elegance through many forms of media. My main focus right now is
