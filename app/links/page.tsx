@@ -53,7 +53,7 @@ export default function Links() {
                 <div className="flex flex-col grow">
                   <p className="text-xl font-semibold">Portfolio</p>
                   <p className="text-sm text-slate-600">
-                    Portfolio Coming Soon
+                    My Modeling Portfolio
                   </p>
                 </div>
               </Link>
