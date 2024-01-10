@@ -14,10 +14,10 @@ export default function Navbar() {
         <p className="text-xl font-semibold tracking-tight">Tina Dinh</p>
       </div>
       <ul className="flex-row hidden gap-6 px-10 lg:flex">
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900">
+        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300 ">
           <Link href={"/"}>Home</Link>
         </li>
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900">
+        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
           <Menu as="div" className="relative">
             <Menu.Button className="inline-flex items-center justify-center w-full gap-1">
               Gallery <ChevronDownIcon className="w-4 h-4" />
@@ -31,11 +31,11 @@ export default function Navbar() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-50"
             >
-              <Menu.Items className="absolute right-0 z-20 w-32 mt-2 origin-top-right rounded-md shadow-lg text-zinc-200 bg-zinc-950">
+              <Menu.Items className="absolute right-0 z-20 w-32 mt-4 origin-top rounded-md shadow-lg text-zinc-200 bg-zinc-950">
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=street"}
-                    className="flex items-center w-full px-2 py-2 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
                   >
                     Street
                   </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=portait"}
-                    className="flex items-center w-full px-2 py-2 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
                   >
                     Portait
                   </Link>
@@ -51,7 +51,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=studio"}
-                    className="flex items-center w-full px-2 py-2 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
                   >
                     Studio
                   </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=boudoir"}
-                    className="flex items-center w-full px-2 py-2 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
                   >
                     Boudoir
                   </Link>
@@ -68,11 +68,13 @@ export default function Navbar() {
             </Transition>
           </Menu>
         </li>
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900">
+        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
           <Link href={"/rates"}>Rates</Link>
         </li>
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900">
-          <Link href={"https://www.instagram.com/tinavivix/"}>Contact</Link>
+        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
+          <Link href={"https://www.instagram.com/tinavivix/"} target="_blank">
+            Contact
+          </Link>
         </li>
       </ul>
       <Menu as="div" className="lg:hidden ">
@@ -167,6 +169,7 @@ export default function Navbar() {
               <Link
                 href={"https://www.instagram.com/tinavivix/"}
                 className="flex items-center w-full px-2 py-2 text-lg rounded-md"
+                target="_blank"
               >
                 Contact
               </Link>
