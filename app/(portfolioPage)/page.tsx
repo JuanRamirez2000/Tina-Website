@@ -21,7 +21,9 @@ export default function Home() {
           />
           <div className="absolute inset-0 z-10 flex justify-center ">
             <div className="absolute z-20 top-[10%]">
-              <h2 className="text-6xl font-bold text-zinc-800">Tina Dinh</h2>
+              <h2 className="text-6xl font-bold tracking-tight text-zinc-800">
+                Tina Dinh
+              </h2>
             </div>
           </div>
         </div>
@@ -38,48 +40,58 @@ export default function Home() {
       <section className="w-full h-full max-w-screen-3xl">
         <ul className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center size-full">
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
-            <CloduinaryImageWrapper
-              src={TINA_STREET_THUMBNAIL}
-              fill={true}
-              alt=""
-              className="object-cover"
-            />
-            <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-cyan-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-cyan-50">Street</p>
-            </div>
+            <Link href={`/gallery?contentType=${"street"}`}>
+              <CloduinaryImageWrapper
+                src={TINA_STREET_THUMBNAIL}
+                fill={true}
+                alt=""
+                className="object-cover"
+              />
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-cyan-300/[99%] pb-20">
+                <p className="text-3xl font-semibold text-cyan-50">Street</p>
+              </div>
+            </Link>
           </li>
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
-            <CloduinaryImageWrapper
-              src={TINA_PORTRAIT_THUMBNAIL}
-              fill={true}
-              alt=""
-              className="object-cover"
-            />
-            <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-indigo-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-indigo-50">Portrait</p>
-            </div>
+            <Link href={`/gallery?contentType=${"portait"}`}>
+              <CloduinaryImageWrapper
+                src={TINA_PORTRAIT_THUMBNAIL}
+                fill={true}
+                alt=""
+                className="object-cover"
+              />
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-indigo-300/[99%] pb-20">
+                <p className="text-3xl font-semibold text-indigo-50">
+                  Portrait
+                </p>
+              </div>
+            </Link>
           </li>
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
-            <CloduinaryImageWrapper
-              src={TINA_STUDIO_THUMBNAIL}
-              fill={true}
-              alt=""
-              className="object-cover"
-            />
-            <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-pink-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-pink-50">Studio</p>
-            </div>
+            <Link href={`/gallery?contentType=${"studio"}`}>
+              <CloduinaryImageWrapper
+                src={TINA_STUDIO_THUMBNAIL}
+                fill={true}
+                alt=""
+                className="object-cover"
+              />
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-pink-300/[99%] pb-20">
+                <p className="text-3xl font-semibold text-pink-50">Studio</p>
+              </div>
+            </Link>
           </li>
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
-            <CloduinaryImageWrapper
-              src={TINA_BOUDOIR_THUMBNAIL}
-              fill={true}
-              alt=""
-              className="object-cover"
-            />
-            <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-rose-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-rose-50">Boudoir</p>
-            </div>
+            <Link href={`/gallery?contentType=${"boudoir"}`}>
+              <CloduinaryImageWrapper
+                src={TINA_BOUDOIR_THUMBNAIL}
+                fill={true}
+                alt=""
+                className="object-cover"
+              />
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-rose-300/[99%] pb-20">
+                <p className="text-3xl font-semibold text-rose-50">Boudoir</p>
+              </div>
+            </Link>
           </li>
         </ul>
       </section>
