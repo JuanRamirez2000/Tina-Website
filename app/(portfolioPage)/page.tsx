@@ -10,21 +10,18 @@ const TINA_BOUDOIR_THUMBNAIL = "Tina/tkq0frt7w1qwcllmsku1";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full px-5 lg:px-10 h-fit lg:h-fit">
+    <div className="flex flex-col items-center w-full px-5 lg:px-10 h-fit lg:h-fit">
       <section className="w-full pt-32 max-w-screen-3xl h-fit">
-        <div className="relative w-full h-[42rem]">
+        <div className="relative w-full h-[48rem]">
           <CloduinaryImageWrapper
             src={HERO_PAGE_IMAGE_ID}
             fill={true}
             alt=""
-            className="object-cover"
+            className="object-cover object-top"
           />
-          <div className="absolute inset-0 z-10 opacity-100 bg-pink-400/20 ">
-            <div className="absolute z-20 top-1/4 left-[15%]">
-              <h2 className="text-6xl font-bold text-pink-50">Tina Dinh</h2>
-            </div>
-            <div className="absolute z-20 bottom-1/4 right-[15%] ">
-              <h2 className="text-6xl font-bold text-pink-50">Model</h2>
+          <div className="absolute inset-0 z-10 flex justify-center ">
+            <div className="absolute z-20 top-[10%]">
+              <h2 className="text-6xl font-bold text-zinc-800">Tina Dinh</h2>
             </div>
           </div>
         </div>
@@ -94,6 +91,6 @@ export default function Home() {
           </Link>
         </p>
       </section>
-    </main>
+    </div>
   );
 }
