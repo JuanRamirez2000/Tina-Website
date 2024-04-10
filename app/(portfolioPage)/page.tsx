@@ -11,7 +11,7 @@ const TINA_BOUDOIR_THUMBNAIL = "Tina/tkq0frt7w1qwcllmsku1";
 export default function Home() {
   return (
     <main className="flex flex-col items-center w-full px-5 lg:px-10 h-fit py-14 lg:h-fit">
-      <section className="relative w-full h-[42rem]">
+      <section className="relative w-full max-w-screen-3xl h-[42rem]">
         <CloduinaryImageWrapper
           src={HERO_PAGE_IMAGE_ID}
           fill={true}
@@ -19,7 +19,7 @@ export default function Home() {
           className="object-cover py-10"
         />
       </section>
-      <section className="flex flex-col items-center justify-around w-4/5 max-w-screen-lg lg:flex-row h-96">
+      <section className="flex flex-col items-center justify-around w-4/5 max-w-screen-3xl lg:flex-row h-96">
         <h1 className="text-5xl font-bold tracking-tight">Comp Card</h1>
         <ul className="text-xl">
           <li>Height: 5&apos;4&quot;</li>
@@ -28,7 +28,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="w-full h-full">
+      <section className="w-full h-full max-w-screen-3xl">
         <ul className="flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center size-full">
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
             <CloduinaryImageWrapper
@@ -84,7 +84,7 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="flex flex-col items-center justify-center w-full py-24">
+      <section className="flex flex-col items-center justify-center w-full py-24 max-w-screen-3xl">
         <p>
           Made with love by{" "}
           <Link href={"https://www.juanr.dev"} className="text-pink-400">
