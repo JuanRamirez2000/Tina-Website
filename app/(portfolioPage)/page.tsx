@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       <section className="w-full h-full max-w-screen-3xl">
-        <ul className="flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center size-full">
+        <ul className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center size-full">
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
             <CloduinaryImageWrapper
               src={TINA_STREET_THUMBNAIL}
@@ -38,9 +38,7 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-cyan-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-cyan-50">
-                Street Modeling
-              </p>
+              <p className="text-3xl font-semibold text-cyan-50">Street</p>
             </div>
           </li>
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
@@ -51,9 +49,7 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-indigo-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-indigo-50">
-                Portrait Modeling
-              </p>
+              <p className="text-3xl font-semibold text-indigo-50">Portrait</p>
             </div>
           </li>
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
@@ -64,9 +60,7 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-pink-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-pink-50">
-                Studio Modeling
-              </p>
+              <p className="text-3xl font-semibold text-pink-50">Studio</p>
             </div>
           </li>
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
@@ -77,9 +71,7 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-rose-300/[99%] pb-20">
-              <p className="text-3xl font-semibold text-rose-50">
-                Boudoir Modeling
-              </p>
+              <p className="text-3xl font-semibold text-rose-50">Boudoir</p>
             </div>
           </li>
         </ul>
