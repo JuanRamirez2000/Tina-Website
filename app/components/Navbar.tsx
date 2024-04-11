@@ -1,5 +1,7 @@
 "use client";
 
+import { checkRole } from "@/utils/roles";
+import { useUser } from "@clerk/nextjs";
 import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -7,6 +9,8 @@ import { Fragment, useState } from "react";
 
 export default function Navbar() {
   const [subMenuVisable, setSubMenuVisable] = useState<boolean>(false);
+  const { user } = useUser();
+  const isAdmin = user?.publicMetadata.role;
 
   return (
     <nav className="fixed top-0 z-50 flex flex-row items-center justify-center w-full p-4 px-6 font-semibold text-zinc-900 bg-gradient-to-r from-cyan-200 via-indigo-200 to-rose-200">
@@ -73,6 +77,15 @@ export default function Navbar() {
           <Link href={"https://www.instagram.com/tinavivix/"} target="_blank">
             Contact
           </Link>
+        </li>
+        <li
+          className={
+            isAdmin
+              ? `px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300`
+              : "hidden"
+          }
+        >
+          <Link href={"/admin"}>Admin</Link>
         </li>
       </ul>
       <Menu as="div" className="lg:hidden ">
@@ -162,6 +175,18 @@ export default function Navbar() {
                 target="_blank"
               >
                 Contact
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link
+                href={"/admin"}
+                className={
+                  isAdmin
+                    ? `flex items-center w-full px-2 py-2 text-lg rounded-md`
+                    : "hidden"
+                }
+              >
+                Admin
               </Link>
             </Menu.Item>
           </Menu.Items>
