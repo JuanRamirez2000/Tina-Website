@@ -9,7 +9,7 @@ export default function Navbar() {
   const [subMenuVisable, setSubMenuVisable] = useState<boolean>(false);
 
   return (
-    <nav className="fixed top-0 z-50 flex flex-row items-center justify-center w-full p-4 px-6 text-zinc-200 bg-zinc-950">
+    <nav className="fixed top-0 z-50 flex flex-row items-center justify-center w-full p-4 px-6 font-semibold text-zinc-900 bg-gradient-to-r from-cyan-200 via-indigo-200 to-rose-200">
       <div className="flex-grow">
         <p className="text-xl font-semibold tracking-tight">Tina Dinh</p>
       </div>
@@ -88,7 +88,7 @@ export default function Navbar() {
           leaveFrom="-translate-x-0 "
           leaveTo="-translate-x-full"
         >
-          <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen pl-4 rounded-md shadow-lg text-zinc-200 bg-zinc-950">
+          <Menu.Items className="absolute left-0 z-10 w-2/3 h-screen pl-4 rounded-md shadow-lg text-zinc-900 bg-gradient-to-br from-cyan-200 via-indigo-200 to-rose-200">
             <Menu.Item>
               <Link
                 href={"/"}

@@ -20,13 +20,6 @@ export default function Home() {
             alt=""
             className="object-cover object-top"
           />
-          <div className="absolute inset-0 z-10 flex justify-center ">
-            <div className="absolute z-20 top-[10%]">
-              <h2 className="text-6xl font-bold tracking-tight text-zinc-800">
-                Tina Dinh
-              </h2>
-            </div>
-          </div>
         </div>
       </section>
       <section className="flex flex-col items-center justify-around w-4/5 max-w-screen-3xl lg:flex-row h-96">
@@ -107,16 +100,16 @@ export default function Home() {
               $75/hr
             </h3>
           </li>
-          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-cyan-300">
-            <p className="p-4 text-sm font-semibold rounded-t-lg bg-cyan-300">
+          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-indigo-300">
+            <p className="p-4 text-sm font-semibold bg-indigo-300 rounded-t-lg">
               Half Day (3-5hrs)
             </p>
             <h3 className="inline-flex items-center justify-center w-full h-24 text-3xl font-bold">
               $300
             </h3>
           </li>
-          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-cyan-300">
-            <p className="p-4 text-sm font-semibold rounded-t-lg bg-cyan-300">
+          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-rose-300">
+            <p className="p-4 text-sm font-semibold rounded-t-lg bg-rose-300">
               Full day (5+hrs)
             </p>
             <h3 className="inline-flex items-center justify-center w-full h-24 text-3xl font-bold">
