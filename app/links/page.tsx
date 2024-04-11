@@ -3,7 +3,7 @@ import { faLink, faMugHot } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faAmazon } from "@fortawesome/free-brands-svg-icons";
 import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 
-const HERO_PAGE_IMAGE_ID = "Tina/portrait/kzel2r28yhdyjahi2d51";
+const HERO_PAGE_IMAGE_ID = "Tina/kzel2r28yhdyjahi2d51";
 
 import Link from "next/link";
 

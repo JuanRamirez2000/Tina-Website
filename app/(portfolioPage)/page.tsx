@@ -2,12 +2,12 @@ import Link from "next/link";
 import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
-const HERO_PAGE_IMAGE_ID = "Tina/portrait/odxnrqgyzpbp2xpr5qve";
+const HERO_PAGE_IMAGE_ID = "Tina/odxnrqgyzpbp2xpr5qve";
 
-const TINA_STREET_THUMBNAIL = "Tina/portrait/kzel2r28yhdyjahi2d51";
-const TINA_PORTRAIT_THUMBNAIL = "Tina/portrait/sh194qz8a88nyu0mkay6";
-const TINA_STUDIO_THUMBNAIL = "Tina/portrait/hi44jqyqn2lozf3fkati";
-const TINA_BOUDOIR_THUMBNAIL = "Tina/studio/tkq0frt7w1qwcllmsku1";
+const TINA_STREET_THUMBNAIL = "Tina/kzel2r28yhdyjahi2d51";
+const TINA_PORTRAIT_THUMBNAIL = "Tina/odo4vy9x1vmfivfxdwbs";
+const TINA_STUDIO_THUMBNAIL = "Tina/hi44jqyqn2lozf3fkati";
+const TINA_BOUDOIR_THUMBNAIL = "Tina/tkq0frt7w1qwcllmsku1";
 
 export default function Home() {
   return (
