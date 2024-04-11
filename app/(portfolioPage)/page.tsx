@@ -18,7 +18,7 @@ export default function Home() {
             src={HERO_PAGE_IMAGE_ID}
             fill={true}
             alt=""
-            className="object-cover object-top"
+            className="object-cover object-top rounded-lg"
           />
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function Home() {
                 src={TINA_STREET_THUMBNAIL}
                 fill={true}
                 alt=""
-                className="object-cover"
+                className="object-cover rounded-lg"
               />
               <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-cyan-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-cyan-50">Street</p>
@@ -52,7 +52,7 @@ export default function Home() {
                 src={TINA_PORTRAIT_THUMBNAIL}
                 fill={true}
                 alt=""
-                className="object-cover"
+                className="object-cover rounded-lg"
               />
               <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-indigo-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-indigo-50">
@@ -67,7 +67,7 @@ export default function Home() {
                 src={TINA_STUDIO_THUMBNAIL}
                 fill={true}
                 alt=""
-                className="object-cover"
+                className="object-cover rounded-lg"
               />
               <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-pink-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-pink-50">Studio</p>
@@ -80,7 +80,7 @@ export default function Home() {
                 src={TINA_BOUDOIR_THUMBNAIL}
                 fill={true}
                 alt=""
-                className="object-cover"
+                className="object-cover rounded-lg"
               />
               <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-rose-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-rose-50">Boudoir</p>
