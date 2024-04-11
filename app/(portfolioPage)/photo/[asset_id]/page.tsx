@@ -1,5 +1,5 @@
 import cloudinary from "cloudinary";
-import CloduinaryImageWrapper from "@/app/components/CloudinaryImageWraper";
+import CloduinaryImageWrapper from "@/components/CloudinaryImageWraper";
 
 export default async function PhotoPage({
   params,

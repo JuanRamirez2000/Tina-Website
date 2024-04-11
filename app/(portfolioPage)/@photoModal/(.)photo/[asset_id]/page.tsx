@@ -1,6 +1,6 @@
 import cloudinary from "cloudinary";
 import ImageModal from "./ImageModal";
-import CloduinaryImageWrapper from "@/app/components/CloudinaryImageWraper";
+import CloduinaryImageWrapper from "@/components/CloudinaryImageWraper";
 
 export default async function PhotoModal({
   params,

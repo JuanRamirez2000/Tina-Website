@@ -1,9 +1,13 @@
 import { redirect } from "next/navigation";
 import { checkRole } from "@/utils/roles";
-import { auth } from "@clerk/nextjs";
+import { PhotoTable } from "./table/PhotoTable";
+import cloudinary from "cloudinary";
+import { columns } from "./table/columns";
 
-export default function Page() {
-  const { userId }: { userId: string | null } = auth();
+export default async function Page() {
+  const { resources: data } = await cloudinary.v2.api.resources_by_asset_folder(
+    "Tina/boudoir"
+  );
 
   if (!checkRole("admin")) {
     redirect("/");
@@ -12,6 +16,7 @@ export default function Page() {
   return (
     <div>
       <h1>Tina Dinh&apos;s Portfolio Dashboard</h1>
+      <PhotoTable data={data} columns={columns} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faMugHot } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faAmazon } from "@fortawesome/free-brands-svg-icons";
-import CloduinaryImageWrapper from "../components/CloudinaryImageWraper";
+import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 
 const HERO_PAGE_IMAGE_ID = "Tina/portrait/kzel2r28yhdyjahi2d51";
 

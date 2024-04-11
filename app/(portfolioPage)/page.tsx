@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CloduinaryImageWrapper from "../components/CloudinaryImageWraper";
+import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 const HERO_PAGE_IMAGE_ID = "Tina/portrait/odxnrqgyzpbp2xpr5qve";

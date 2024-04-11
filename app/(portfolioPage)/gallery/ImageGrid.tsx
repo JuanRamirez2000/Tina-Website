@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
+import CloduinaryImageWrapper from "../../../components/CloudinaryImageWraper";
 import { ResourceApiResponse } from "cloudinary";
 
 export default function ImageGrid({
