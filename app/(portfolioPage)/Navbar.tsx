@@ -68,9 +68,7 @@ export default function Navbar() {
             </Transition>
           </Menu>
         </li>
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
-          <Link href={"/rates"}>Rates</Link>
-        </li>
+
         <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
           <Link href={"https://www.instagram.com/tinavivix/"} target="_blank">
             Contact
@@ -157,14 +155,6 @@ export default function Navbar() {
                 </>
               )}
             </Transition>
-            <Menu.Item>
-              <Link
-                href={"/rates"}
-                className="flex items-center w-full px-2 py-2 text-lg rounded-md"
-              >
-                Rates
-              </Link>
-            </Menu.Item>
             <Menu.Item>
               <Link
                 href={"https://www.instagram.com/tinavivix/"}

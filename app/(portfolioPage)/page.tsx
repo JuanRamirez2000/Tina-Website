@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CloduinaryImageWrapper from "../components/CloudinaryImageWraper";
+import { HeartIcon } from "@heroicons/react/24/outline";
 
 const HERO_PAGE_IMAGE_ID = "Tina/odxnrqgyzpbp2xpr5qve";
 
@@ -95,9 +96,40 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="flex flex-col items-center justify-center w-full py-24 max-w-screen-3xl">
+      <section className="flex flex-col items-center justify-around w-4/5 pt-12 max-w-screen-3xl h-fit">
+        <h1 className="py-12 text-5xl font-bold tracking-tight">Rates</h1>
+        <ul className="flex flex-col items-center justify-around w-full gap-6 text-xl lg:items-start lg:flex-row h-fit">
+          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-cyan-300">
+            <p className="p-4 text-sm font-semibold rounded-t-lg bg-cyan-300">
+              Basic Shoot (1-3hrs)
+            </p>
+            <h3 className="inline-flex items-center justify-center w-full h-24 text-3xl font-bold">
+              $75/hr
+            </h3>
+          </li>
+          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-cyan-300">
+            <p className="p-4 text-sm font-semibold rounded-t-lg bg-cyan-300">
+              Half Day (3-5hrs)
+            </p>
+            <h3 className="inline-flex items-center justify-center w-full h-24 text-3xl font-bold">
+              $300
+            </h3>
+          </li>
+          <li className="w-56 h-40 text-center rounded-lg shadow-2xl shadow-cyan-300">
+            <p className="p-4 text-sm font-semibold rounded-t-lg bg-cyan-300">
+              Full day (5+hrs)
+            </p>
+            <h3 className="inline-flex items-center justify-center w-full h-24 text-3xl font-bold">
+              $500
+            </h3>
+          </li>
+        </ul>
+      </section>
+      <section className="flex flex-col items-center justify-center w-full h-48 pt-24 max-w-screen-3xl">
         <p>
-          Made with love by{" "}
+          Made with{" "}
+          <HeartIcon className="inline w-5 h-5 text-pink-400 fill-pink-400" />{" "}
+          by{" "}
           <Link href={"https://www.juanr.dev"} className="text-pink-400">
             @Juan
           </Link>
