@@ -87,7 +87,6 @@ export function PhotoTable<TData, TValue>({
         ]);
       }
     }
-    console.log(columnFilters);
   };
 
   return (
