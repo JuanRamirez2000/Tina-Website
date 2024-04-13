@@ -21,10 +21,10 @@ export default async function CoverImageSettings() {
     image.tags.includes("coverImageBoudoir")
   );
   return (
-    <ul className="w-4/5 flex flex-col gap-2">
+    <ul className="w-4/5 lg:w-full flex flex-col gap-2">
       <li className="w-full h-fit bg-cyan-100 p-4 rounded-lg">
         <div className="flex flex-row justify-between pb-2 items-baseline">
-          <h2 className="text-lg font-semibold">Street Cover Image</h2>
+          <h2 className="text-lg font-semibold">Street</h2>
           <Button size={"sm"} variant="outline" className=" rounded-lg">
             <PencilSquareIcon className="h-4 w-4 mr-2" /> Change
           </Button>
@@ -40,7 +40,7 @@ export default async function CoverImageSettings() {
       </li>
       <li className="w-full h-fit relative bg-indigo-100 p-4 rounded-lg">
         <div className="flex flex-row justify-between pb-2 items-baseline">
-          <h2 className="text-lg font-semibold">Portait Cover Image</h2>
+          <h2 className="text-lg font-semibold">Portait</h2>
           <Button size={"sm"} variant="outline" className=" rounded-lg">
             <PencilSquareIcon className="h-4 w-4 mr-2" /> Change
           </Button>
@@ -56,7 +56,7 @@ export default async function CoverImageSettings() {
       </li>
       <li className="w-full h-fit relative bg-rose-100 p-4 rounded-lg">
         <div className="flex flex-row justify-between pb-2 items-baseline">
-          <h2 className="text-lg font-semibold">Studio Cover Image</h2>
+          <h2 className="text-lg font-semibold">Studio</h2>
           <Button size={"sm"} variant="outline" className=" rounded-lg">
             <PencilSquareIcon className="h-4 w-4 mr-2" /> Change
           </Button>
@@ -72,7 +72,7 @@ export default async function CoverImageSettings() {
       </li>
       <li className="w-full h-fit relative bg-pink-100 p-4 rounded-lg">
         <div className="flex flex-row justify-between pb-2 items-baseline">
-          <h2 className="text-lg font-semibold">Boudoir Cover Image</h2>
+          <h2 className="text-lg font-semibold">Boudoir</h2>
           <Button size={"sm"} variant="outline" className=" rounded-lg">
             <PencilSquareIcon className="h-4 w-4 mr-2" /> Change
           </Button>

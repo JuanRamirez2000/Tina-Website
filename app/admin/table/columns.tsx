@@ -4,6 +4,7 @@ import { ColumnDef } from "@tanstack/react-table";
 
 import { ResourceApiResponse } from "cloudinary";
 import { Checkbox } from "@/components/ui/checkbox";
+import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export type Photos = ResourceApiResponse["resources"][0];
@@ -32,26 +33,42 @@ export const columns: ColumnDef<Photos>[] = [
     enableHiding: false,
   },
   {
+    id: "delete",
+    header: () => {
+      return <TrashIcon className="h-6 w-6" />;
+    },
+    cell: () => {
+      return <TrashIcon className="h-6 w-6 text-red-400" />;
+    },
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
+    id: "edit",
+    header: () => {
+      return <PencilSquareIcon className="h-6 w-6" />;
+    },
+    cell: () => {
+      return <PencilSquareIcon className="h-6 w-6 text-emerald-400" />;
+    },
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
     accessorKey: "url",
     header: "Image",
     cell: ({ row }) => {
       const imageUrl = row.original.url;
       return (
-        <div>
-          <Image
-            src={imageUrl}
-            alt=""
-            height={75}
-            width={75}
-            className="rounded-md"
-          />
-        </div>
+        <Image
+          src={imageUrl}
+          alt=""
+          height={75}
+          width={75}
+          className="rounded-md"
+        />
       );
     },
-  },
-  {
-    accessorKey: "created_at",
-    header: "Created At",
   },
   {
     accessorKey: "tags",
