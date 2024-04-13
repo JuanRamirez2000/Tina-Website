@@ -23,7 +23,7 @@ export default async function Page() {
       <div className="w-full lg:w-1/2">
         <PhotoTable data={data} columns={columns} />
       </div>
-      <div className="w-full lg:w-1/4 flex flex-col items-center">
+      <div className="w-full lg:w-1/2">
         <CoverImageSettings />
       </div>
     </section>
