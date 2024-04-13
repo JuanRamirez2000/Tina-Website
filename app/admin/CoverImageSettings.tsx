@@ -21,7 +21,7 @@ export default async function CoverImageSettings() {
     image.tags.includes("coverImageBoudoir")
   );
   return (
-    <ul className="w-full grid grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-2">
+    <ul className="w-full flex flex-col gap-2">
       <li className="w-full h-fit bg-cyan-100 p-4 rounded-lg">
         <div className="flex flex-row justify-between pb-2 items-baseline">
           <h2 className="text-lg font-semibold">Street Cover Image</h2>
