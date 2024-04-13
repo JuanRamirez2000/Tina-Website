@@ -3,12 +3,13 @@ import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import cloudinary from "cloudinary";
 
-const HERO_PAGE_IMAGE_ID = "Tina/odxnrqgyzpbp2xpr5qve";
-
 export default async function Home() {
   const { resources: coverImages } = await cloudinary.v2.api.resources_by_tag(
     "coverImage",
     { tags: true }
+  );
+  const heroCoverImage = coverImages.find((image) =>
+    image.tags.includes("coverImageHero")
   );
   const streetCoverPhoto = coverImages.find((image) =>
     image.tags.includes("coverImageStreet")
@@ -28,7 +29,7 @@ export default async function Home() {
       <section className="w-full pt-32 max-w-screen-3xl h-fit">
         <div className="relative w-full h-[48rem]">
           <CloduinaryImageWrapper
-            src={HERO_PAGE_IMAGE_ID}
+            src={heroCoverImage?.url as string}
             fill={true}
             alt=""
             className="object-cover object-top rounded-lg"
