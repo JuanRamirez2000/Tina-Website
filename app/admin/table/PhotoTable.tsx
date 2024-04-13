@@ -91,7 +91,7 @@ export function PhotoTable<TData, TValue>({
 
   return (
     <div className="container">
-      <div className="flex flex-row justify-between items-baseline">
+      <div className="flex flex-col lg:flex-row justify-between items-baseline">
         <ul className="flex flex-row gap-2 pt-4">
           <li>
             <input

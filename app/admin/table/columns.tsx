@@ -38,7 +38,7 @@ export const columns: ColumnDef<Photos>[] = [
       return <TrashIcon className="h-6 w-6" />;
     },
     cell: () => {
-      return <TrashIcon className="h-6 w-6 text-red-400" />;
+      return <TrashIcon className="h-6 w-6 text-red-400 cursor-pointer" />;
     },
     enableSorting: false,
     enableHiding: false,
@@ -49,7 +49,9 @@ export const columns: ColumnDef<Photos>[] = [
       return <PencilSquareIcon className="h-6 w-6" />;
     },
     cell: () => {
-      return <PencilSquareIcon className="h-6 w-6 text-emerald-400" />;
+      return (
+        <PencilSquareIcon className="h-6 w-6 text-emerald-400 cursor-pointer" />
+      );
     },
     enableSorting: false,
     enableHiding: false,

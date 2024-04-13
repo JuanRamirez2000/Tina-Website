@@ -22,7 +22,7 @@ export default async function CoverImageSettings() {
     image.tags.includes("coverImageBoudoir")
   );
   return (
-    <ul className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2">
+    <ul className="w-full grid grid-cols-1 sm:grid-cols-2 gap-2 container px-0">
       <li className="w-full h-fit bg-emerald-100 p-4 rounded-lg">
         <CoverImageCardEdit
           coverImageName="Hero"
