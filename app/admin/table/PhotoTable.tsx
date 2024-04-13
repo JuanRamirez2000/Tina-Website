@@ -90,77 +90,102 @@ export function PhotoTable<TData, TValue>({
   };
 
   return (
-    <div>
-      <ul className="flex flex-row gap-2 py-4">
-        <li>
-          <input
-            type="checkbox"
-            id="street"
-            className="hidden peer"
-            value="street"
-            onChange={() => updateTagsFilter("street")}
-          />
-          <label
-            htmlFor="street"
-            className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer"
+    <div className="container">
+      <div className="flex flex-row justify-between items-baseline">
+        <ul className="flex flex-row gap-2 pt-4">
+          <li>
+            <input
+              type="checkbox"
+              id="street"
+              className="hidden peer"
+              value="street"
+              onChange={() => updateTagsFilter("street")}
+            />
+            <label
+              htmlFor="street"
+              className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer"
+            >
+              Street
+            </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="portrait"
+              className="hidden peer"
+              value="portrait"
+              onChange={() => updateTagsFilter("portait")}
+            />
+            <label
+              htmlFor="portrait"
+              className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
+            >
+              Portrait
+            </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="studio"
+              className="hidden peer"
+              value="studio"
+              onChange={() => updateTagsFilter("studio")}
+            />
+            <label
+              htmlFor="studio"
+              className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
+            >
+              Studio
+            </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="boudoir"
+              className="hidden peer"
+              value="boudoir"
+              onChange={() => updateTagsFilter("boudoir")}
+            />
+            <label
+              htmlFor="boudoir"
+              className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
+            >
+              Boudoir
+            </label>
+          </li>
+        </ul>
+        <div className="flex items-center justify-end space-x-2 py-4">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+            className="border-cyan-300 border-2"
           >
-            Street
-          </label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="portrait"
-            className="hidden peer"
-            value="portrait"
-            onChange={() => updateTagsFilter("portait")}
-          />
-          <label
-            htmlFor="portrait"
-            className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
+            Previous
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+            className="border-pink-300 border-2"
           >
-            Portrait
-          </label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="studio"
-            className="hidden peer"
-            value="studio"
-            onChange={() => updateTagsFilter("studio")}
-          />
-          <label
-            htmlFor="studio"
-            className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
-          >
-            Studio
-          </label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="boudoir"
-            className="hidden peer"
-            value="boudoir"
-            onChange={() => updateTagsFilter("boudoir")}
-          />
-          <label
-            htmlFor="boudoir"
-            className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
-          >
-            Boudoir
-          </label>
-        </li>
-      </ul>
-      <div className="border rounded-md">
+            Next
+          </Button>
+        </div>
+      </div>
+      <div className="border rounded-lg">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id}>
+                    <TableHead
+                      key={header.id}
+                      className="font-bold text-zinc-900"
+                    >
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -202,24 +227,6 @@ export function PhotoTable<TData, TValue>({
             )}
           </TableBody>
         </Table>
-      </div>
-      <div className="flex items-center justify-end space-x-2 py-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          Previous
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          Next
-        </Button>
       </div>
     </div>
   );

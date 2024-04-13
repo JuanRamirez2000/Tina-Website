@@ -4,6 +4,7 @@ import { ColumnDef } from "@tanstack/react-table";
 
 import { ResourceApiResponse } from "cloudinary";
 import { Checkbox } from "@/components/ui/checkbox";
+import Image from "next/image";
 
 export type Photos = ResourceApiResponse["resources"][0];
 
@@ -32,13 +33,31 @@ export const columns: ColumnDef<Photos>[] = [
   },
   {
     accessorKey: "url",
-    header: "URL",
+    header: "Image",
+    cell: ({ row }) => {
+      const imageUrl = row.original.url;
+      return (
+        <div>
+          <Image
+            src={imageUrl}
+            alt=""
+            height={100}
+            width={100}
+            className="rounded-md"
+          />
+        </div>
+      );
+    },
+  },
+  {
+    accessorKey: "created_at",
+    header: "Created At",
   },
   {
     accessorKey: "tags",
     header: "Tags",
     filterFn: (row, _, filterValue) => {
-      if (!filterValue) return true;
+      if (!filterValue || filterValue.length === 0) return true;
       return row.original.tags.some((tag) => filterValue.includes(tag));
     },
     cell: ({ row }) => {
