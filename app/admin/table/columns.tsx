@@ -41,8 +41,8 @@ export const columns: ColumnDef<Photos>[] = [
           <Image
             src={imageUrl}
             alt=""
-            height={100}
-            width={100}
+            height={75}
+            width={75}
             className="rounded-md"
           />
         </div>

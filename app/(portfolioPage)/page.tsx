@@ -1,15 +1,28 @@
 import Link from "next/link";
 import CloduinaryImageWrapper from "../../components/CloudinaryImageWraper";
 import { HeartIcon } from "@heroicons/react/24/outline";
+import cloudinary from "cloudinary";
 
 const HERO_PAGE_IMAGE_ID = "Tina/odxnrqgyzpbp2xpr5qve";
 
-const TINA_STREET_THUMBNAIL = "Tina/kzel2r28yhdyjahi2d51";
-const TINA_PORTRAIT_THUMBNAIL = "Tina/odo4vy9x1vmfivfxdwbs";
-const TINA_STUDIO_THUMBNAIL = "Tina/hi44jqyqn2lozf3fkati";
-const TINA_BOUDOIR_THUMBNAIL = "Tina/tkq0frt7w1qwcllmsku1";
+export default async function Home() {
+  const { resources: coverImages } = await cloudinary.v2.api.resources_by_tag(
+    "coverImage",
+    { tags: true }
+  );
+  const streetCoverPhoto = coverImages.find((image) =>
+    image.tags.includes("coverImageStreet")
+  );
+  const portraitCoverPhoto = coverImages.find((image) =>
+    image.tags.includes("coverImagePortait")
+  );
+  const studioCoverPhoto = coverImages.find((image) =>
+    image.tags.includes("coverImageStudio")
+  );
+  const boudoirCoverPhoto = coverImages.find((image) =>
+    image.tags.includes("coverImageBoudoir")
+  );
 
-export default function Home() {
   return (
     <div className="flex flex-col items-center w-full px-5 lg:px-10 h-fit lg:h-fit">
       <section className="w-full pt-32 max-w-screen-3xl h-fit">
@@ -36,7 +49,7 @@ export default function Home() {
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer ">
             <Link href={`/gallery?contentType=${"street"}`}>
               <CloduinaryImageWrapper
-                src={TINA_STREET_THUMBNAIL}
+                src={streetCoverPhoto?.url as string}
                 fill={true}
                 alt=""
                 className="object-cover rounded-lg"
@@ -49,7 +62,7 @@ export default function Home() {
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
             <Link href={`/gallery?contentType=${"portait"}`}>
               <CloduinaryImageWrapper
-                src={TINA_PORTRAIT_THUMBNAIL}
+                src={portraitCoverPhoto?.url as string}
                 fill={true}
                 alt=""
                 className="object-cover rounded-lg"
@@ -64,7 +77,7 @@ export default function Home() {
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
             <Link href={`/gallery?contentType=${"studio"}`}>
               <CloduinaryImageWrapper
-                src={TINA_STUDIO_THUMBNAIL}
+                src={studioCoverPhoto?.url as string}
                 fill={true}
                 alt=""
                 className="object-cover rounded-lg"
@@ -77,7 +90,7 @@ export default function Home() {
           <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
             <Link href={`/gallery?contentType=${"boudoir"}`}>
               <CloduinaryImageWrapper
-                src={TINA_BOUDOIR_THUMBNAIL}
+                src={boudoirCoverPhoto?.url as string}
                 fill={true}
                 alt=""
                 className="object-cover rounded-lg"
