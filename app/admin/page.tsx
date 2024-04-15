@@ -4,6 +4,7 @@ import { PhotoTable } from "./table/PhotoTable";
 import cloudinary from "cloudinary";
 import { columns } from "./table/columns";
 import CoverImageSettings from "./CoverImageSettings";
+import AdminControls from "./AdminControls/AdminControls";
 
 export default async function Page() {
   const { resources: data } = await cloudinary.v2.api.resources({
@@ -23,7 +24,8 @@ export default async function Page() {
       <div className="w-full lg:w-1/2">
         <PhotoTable data={data} columns={columns} />
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-1/2 flex flex-col gap-4">
+        <AdminControls />
         <CoverImageSettings />
       </div>
     </section>

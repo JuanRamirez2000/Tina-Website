@@ -96,13 +96,13 @@ export function PhotoTable<TData, TValue>({
           <li>
             <input
               type="checkbox"
-              id="street"
+              id="streetFilter"
               className="hidden peer"
-              value="street"
+              value="streetFilter"
               onChange={() => updateTagsFilter("street")}
             />
             <label
-              htmlFor="street"
+              htmlFor="streetFilter"
               className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer"
             >
               Street
@@ -111,13 +111,13 @@ export function PhotoTable<TData, TValue>({
           <li>
             <input
               type="checkbox"
-              id="portrait"
+              id="portraitFilter"
               className="hidden peer"
-              value="portrait"
+              value="portraitFilter"
               onChange={() => updateTagsFilter("portait")}
             />
             <label
-              htmlFor="portrait"
+              htmlFor="portraitFilter"
               className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
             >
               Portrait
@@ -126,13 +126,13 @@ export function PhotoTable<TData, TValue>({
           <li>
             <input
               type="checkbox"
-              id="studio"
+              id="studioFilter"
               className="hidden peer"
-              value="studio"
+              value="studioFilter"
               onChange={() => updateTagsFilter("studio")}
             />
             <label
-              htmlFor="studio"
+              htmlFor="studioFilter"
               className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
             >
               Studio
@@ -141,13 +141,13 @@ export function PhotoTable<TData, TValue>({
           <li>
             <input
               type="checkbox"
-              id="boudoir"
+              id="boudoirFilter"
               className="hidden peer"
-              value="boudoir"
+              value="boudoirFilter"
               onChange={() => updateTagsFilter("boudoir")}
             />
             <label
-              htmlFor="boudoir"
+              htmlFor="boudoirFilter"
               className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
             >
               Boudoir
