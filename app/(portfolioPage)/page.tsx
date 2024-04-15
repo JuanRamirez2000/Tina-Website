@@ -27,7 +27,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center w-full px-5 lg:px-10 h-fit lg:h-fit">
       <section className="w-full pt-32 max-w-screen-3xl h-fit">
-        <div className="relative w-full h-[48rem]">
+        <div className="relative w-full h-[48rem] shadow-2xl shadow-sky-300">
           <CloduinaryImageWrapper
             src={heroCoverImage?.url as string}
             fill={true}
@@ -47,7 +47,7 @@ export default async function Home() {
 
       <section className="w-full h-full max-w-screen-3xl">
         <ul className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center size-full">
-          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer ">
+          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer shadow-2xl shadow-cyan-300">
             <Link href={`/gallery?contentType=${"street"}`}>
               <CloduinaryImageWrapper
                 src={streetCoverPhoto?.url as string}
@@ -55,12 +55,12 @@ export default async function Home() {
                 alt=""
                 className="object-cover rounded-lg"
               />
-              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-cyan-300/[99%] pb-20">
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 rounded-lg bg-gradient-to-t from-cyan-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-cyan-50">Street</p>
               </div>
             </Link>
           </li>
-          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
+          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer shadow-2xl shadow-indigo-300">
             <Link href={`/gallery?contentType=${"portait"}`}>
               <CloduinaryImageWrapper
                 src={portraitCoverPhoto?.url as string}
@@ -68,14 +68,14 @@ export default async function Home() {
                 alt=""
                 className="object-cover rounded-lg"
               />
-              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-indigo-300/[99%] pb-20">
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 rounded-lg bg-gradient-to-t from-indigo-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-indigo-50">
                   Portrait
                 </p>
               </div>
             </Link>
           </li>
-          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
+          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer shadow-2xl shadow-pink-300">
             <Link href={`/gallery?contentType=${"studio"}`}>
               <CloduinaryImageWrapper
                 src={studioCoverPhoto?.url as string}
@@ -83,12 +83,12 @@ export default async function Home() {
                 alt=""
                 className="object-cover rounded-lg"
               />
-              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-pink-300/[99%] pb-20">
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 rounded-lg bg-gradient-to-t from-pink-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-pink-50">Studio</p>
               </div>
             </Link>
           </li>
-          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer">
+          <li className="relative w-full lg:w-3/4 h-[52rem] cursor-pointer shadow-2xl shadow-rose-300">
             <Link href={`/gallery?contentType=${"boudoir"}`}>
               <CloduinaryImageWrapper
                 src={boudoirCoverPhoto?.url as string}
@@ -96,7 +96,7 @@ export default async function Home() {
                 alt=""
                 className="object-cover rounded-lg"
               />
-              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 bg-gradient-to-t from-rose-300/[99%] pb-20">
+              <div className="absolute inset-0 z-10 flex items-end justify-center duration-300 lg:opacity-0 lg:hover:opacity-100 rounded-lg bg-gradient-to-t from-rose-300/[99%] pb-20">
                 <p className="text-3xl font-semibold text-rose-50">Boudoir</p>
               </div>
             </Link>

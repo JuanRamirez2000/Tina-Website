@@ -18,9 +18,12 @@ export default function Navbar() {
         <p className="text-xl font-semibold tracking-tight">Tina Dinh</p>
       </div>
       <ul className="flex-row hidden gap-6 px-10 lg:flex">
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300 ">
-          <Link href={"/"}>Home</Link>
-        </li>
+        <Link
+          href={"/"}
+          className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300 "
+        >
+          <li>Home</li>
+        </Link>
         <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
           <Menu as="div" className="relative">
             <Menu.Button className="inline-flex items-center justify-center w-full gap-1">
@@ -72,12 +75,13 @@ export default function Navbar() {
             </Transition>
           </Menu>
         </li>
-
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
-          <Link href={"https://www.instagram.com/tinavivix/"} target="_blank">
-            Contact
-          </Link>
-        </li>
+        <Link
+          href={"https://www.instagram.com/tinavivix/"}
+          target="_blank"
+          className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300"
+        >
+          <li>Contact</li>
+        </Link>
         <li
           className={
             isAdmin
