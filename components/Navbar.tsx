@@ -1,6 +1,4 @@
 "use client";
-
-import { checkRole } from "@/utils/roles";
 import { useUser } from "@clerk/nextjs";
 import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -20,11 +18,11 @@ export default function Navbar() {
       <ul className="flex-row hidden gap-6 px-10 lg:flex">
         <Link
           href={"/"}
-          className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300 "
+          className="px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300 "
         >
           <li>Home</li>
         </Link>
-        <li className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
+        <li className="px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
           <Menu as="div" className="relative">
             <Menu.Button className="inline-flex items-center justify-center w-full gap-1">
               Gallery <ChevronDownIcon className="w-4 h-4" />
@@ -42,7 +40,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=street"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
                   >
                     Street
                   </Link>
@@ -50,7 +48,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=portait"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
                   >
                     Portait
                   </Link>
@@ -58,7 +56,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=studio"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
                   >
                     Studio
                   </Link>
@@ -66,7 +64,7 @@ export default function Navbar() {
                 <Menu.Item>
                   <Link
                     href={"/gallery?contentType=boudoir"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 hover:scale-105"
+                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
                   >
                     Boudoir
                   </Link>
@@ -78,14 +76,14 @@ export default function Navbar() {
         <Link
           href={"https://www.instagram.com/tinavivix/"}
           target="_blank"
-          className="px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300"
+          className="px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300"
         >
           <li>Contact</li>
         </Link>
         <li
           className={
             isAdmin
-              ? `px-3.5 py-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-300 hover:to-pink-300 hover:text-zinc-900 transition-all hover:scale-105 duration-300`
+              ? `px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300`
               : "hidden"
           }
         >
