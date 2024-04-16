@@ -6,6 +6,14 @@ import { ResourceApiResponse } from "cloudinary";
 import { Checkbox } from "@/components/ui/checkbox";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import {
+  Dialog,
+  DialogHeader,
+  DialogTrigger,
+  DialogContent,
+} from "@/components/ui/dialog";
+import EditPhotoModal from "./EditPhotoModal";
+import DeletePhotoModal from "./DeletePhotoModal";
 
 export type Photos = ResourceApiResponse["resources"][0];
 
@@ -37,8 +45,8 @@ export const columns: ColumnDef<Photos>[] = [
     header: () => {
       return <TrashIcon className="h-6 w-6" />;
     },
-    cell: () => {
-      return <TrashIcon className="h-6 w-6 text-red-400 cursor-pointer" />;
+    cell: ({ row }) => {
+      return <DeletePhotoModal row={row} />;
     },
     enableSorting: false,
     enableHiding: false,
@@ -48,10 +56,8 @@ export const columns: ColumnDef<Photos>[] = [
     header: () => {
       return <PencilSquareIcon className="h-6 w-6" />;
     },
-    cell: () => {
-      return (
-        <PencilSquareIcon className="h-6 w-6 text-emerald-400 cursor-pointer" />
-      );
+    cell: ({ row }) => {
+      return <EditPhotoModal row={row} />;
     },
     enableSorting: false,
     enableHiding: false,
