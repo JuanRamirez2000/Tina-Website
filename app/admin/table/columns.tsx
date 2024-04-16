@@ -6,12 +6,6 @@ import { ResourceApiResponse } from "cloudinary";
 import { Checkbox } from "@/components/ui/checkbox";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import {
-  Dialog,
-  DialogHeader,
-  DialogTrigger,
-  DialogContent,
-} from "@/components/ui/dialog";
 import EditPhotoModal from "./EditPhotoModal";
 import DeletePhotoModal from "./DeletePhotoModal";
 

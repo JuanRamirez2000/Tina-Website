@@ -113,7 +113,7 @@ export default function NewPhotoControl() {
             </ul>
             <button
               className="px-3 py-2 bg-sky-200 disabled:bg-slate-200 rounded-lg"
-              disabled={!selectedFile ? true : false}
+              disabled={!selectedFile}
             >
               Submit
             </button>

@@ -13,7 +13,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>(
+    row.original.tags ? row.original.tags : []
+  );
 
   const updateTags = (tagName: string) => {
     if (!selectedTags.includes(tagName)) {
@@ -46,6 +48,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
               id="streetEdit"
               className="hidden peer"
               value="streetEdit"
+              defaultChecked={row.original.tags.includes("street")}
               onChange={() => updateTags("street")}
             />
             <label
@@ -61,6 +64,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
               id="portraitEdit"
               className="hidden peer"
               value="portraitEdit"
+              defaultChecked={row.original.tags.includes("portait")}
               onChange={() => updateTags("portait")}
             />
             <label
@@ -76,6 +80,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
               id="studioEdit"
               className="hidden peer"
               value="studioEdit"
+              defaultChecked={row.original.tags.includes("studio")}
               onChange={() => updateTags("studio")}
             />
             <label
@@ -91,6 +96,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
               id="boudoirEdit"
               className="hidden peer"
               value="boudoirEdit"
+              defaultChecked={row.original.tags.includes("boudoir")}
               onChange={() => updateTags("boudoir")}
             />
             <label
