@@ -15,12 +15,11 @@ export default function NewPhotoControl() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  //!TODO - Fix this as well as ./table/EditPhoto
   const updateTags = (tagName: string) => {
     if (!selectedTags.includes(tagName)) {
       setSelectedTags([...selectedTags, tagName]);
     } else {
-      const newTags = selectedTags.filter((tag) => tag === tagName);
+      const newTags = selectedTags.filter((tag) => tag !== tagName);
       setSelectedTags(newTags);
     }
   };

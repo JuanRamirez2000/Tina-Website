@@ -17,10 +17,8 @@ export default function CoverImageCardEdit({
       <div className="flex flex-row justify-between pb-2 items-baseline">
         <h2 className="text-lg font-semibold">{coverImageName}</h2>
         <Dialog>
-          <DialogTrigger>
-            <Button size={"sm"} variant="outline" className=" rounded-lg">
-              <PencilSquareIcon className="h-4 w-4 mr-2" /> Change
-            </Button>
+          <DialogTrigger className="rounded-lg inline-flex flex-row px-3 py-2 bg-white items-center hover:scale-105 duration-75 transition-all">
+            <PencilSquareIcon className="h-5 w-5 mr-2" /> Change
           </DialogTrigger>
           <DialogContent>
             <Tabs defaultValue="change" className="w-full ">

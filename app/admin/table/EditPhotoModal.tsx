@@ -15,12 +15,11 @@ import { useState } from "react";
 export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  //!TODO - Fix this as well as ./AdminControls/NewPhotoControl
   const updateTags = (tagName: string) => {
     if (!selectedTags.includes(tagName)) {
       setSelectedTags([...selectedTags, tagName]);
     } else {
-      const newTags = selectedTags.filter((tag) => tag === tagName);
+      const newTags = selectedTags.filter((tag) => tag !== tagName);
       setSelectedTags(newTags);
     }
   };
