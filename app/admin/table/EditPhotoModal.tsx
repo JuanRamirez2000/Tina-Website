@@ -11,11 +11,13 @@ import {
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState } from "react";
+import { updateImageTags } from "@/app/actions/imageActions";
 
 export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
   const [selectedTags, setSelectedTags] = useState<string[]>(
     row.original.tags ? row.original.tags : []
   );
+  const [openEditImageModal, setOpenEditImageModal] = useState<boolean>(false);
 
   const updateTags = (tagName: string) => {
     if (!selectedTags.includes(tagName)) {
@@ -27,7 +29,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
   };
 
   return (
-    <Dialog>
+    <Dialog open={openEditImageModal} onOpenChange={setOpenEditImageModal}>
       <DialogTrigger>
         <PencilSquareIcon className="h-6 w-6 text-emerald-400 cursor-pointer" />
       </DialogTrigger>
@@ -45,14 +47,14 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
           <li>
             <input
               type="checkbox"
-              id="streetEdit"
+              id="edit_Street"
               className="hidden peer"
-              value="streetEdit"
+              value="edit_Street"
               defaultChecked={row.original.tags.includes("street")}
               onChange={() => updateTags("street")}
             />
             <label
-              htmlFor="streetEdit"
+              htmlFor="edit_Street"
               className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer"
             >
               Street
@@ -61,14 +63,14 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
           <li>
             <input
               type="checkbox"
-              id="portraitEdit"
+              id="edit_Portait"
               className="hidden peer"
-              value="portraitEdit"
+              value="edit_Portait"
               defaultChecked={row.original.tags.includes("portait")}
               onChange={() => updateTags("portait")}
             />
             <label
-              htmlFor="portraitEdit"
+              htmlFor="edit_Portait"
               className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
             >
               Portrait
@@ -77,14 +79,14 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
           <li>
             <input
               type="checkbox"
-              id="studioEdit"
+              id="edit_Studio"
               className="hidden peer"
-              value="studioEdit"
+              value="edit_Studio"
               defaultChecked={row.original.tags.includes("studio")}
               onChange={() => updateTags("studio")}
             />
             <label
-              htmlFor="studioEdit"
+              htmlFor="edit_Studio"
               className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
             >
               Studio
@@ -93,21 +95,29 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
           <li>
             <input
               type="checkbox"
-              id="boudoirEdit"
+              id="edit_boudoir"
               className="hidden peer"
-              value="boudoirEdit"
+              value="edit_boudoir"
               defaultChecked={row.original.tags.includes("boudoir")}
               onChange={() => updateTags("boudoir")}
             />
             <label
-              htmlFor="boudoirEdit"
+              htmlFor="edit_boudoir"
               className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
             >
               Boudoir
             </label>
           </li>
         </ul>
-        <button className="bg-green-200 rounded-lg px-3 py-2">Save</button>
+        <button
+          className="bg-green-200 rounded-lg px-3 py-2"
+          onClick={async () => {
+            await updateImageTags(row.original.public_id, selectedTags);
+            setOpenEditImageModal(false);
+          }}
+        >
+          Save
+        </button>
       </DialogContent>
     </Dialog>
   );

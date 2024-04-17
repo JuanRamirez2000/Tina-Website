@@ -1,6 +1,6 @@
 "use client";
 
-import { updateImageTags } from "@/app/actions/imageActions";
+import { addImageTags } from "@/app/actions/imageActions";
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import { UploadApiResponse } from "cloudinary";
@@ -134,7 +134,7 @@ export default function NewPhotoControl() {
               className="px-3 py-2 bg-sky-200 disabled:bg-slate-200 rounded-lg hover:scale-105"
               disabled={!imageUploaded?.public_id}
               onClick={async () => {
-                await updateImageTags(imageUploaded?.public_id!, selectedTags);
+                await addImageTags(imageUploaded?.public_id!, selectedTags);
                 setOpenConfirmation(false);
                 setImageUploaded(null);
                 setSelectedTags([]);
