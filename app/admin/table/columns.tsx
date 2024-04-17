@@ -4,10 +4,16 @@ import { ColumnDef } from "@tanstack/react-table";
 
 import { ResourceApiResponse } from "cloudinary";
 import { Checkbox } from "@/components/ui/checkbox";
-import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  PencilSquareIcon,
+  TrashIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import EditPhotoModal from "./EditPhotoModal";
 import DeletePhotoModal from "./DeletePhotoModal";
+import { Button } from "@/components/ui/button";
 
 export type Photos = ResourceApiResponse["resources"][0];
 
@@ -74,7 +80,22 @@ export const columns: ColumnDef<Photos>[] = [
   },
   {
     accessorKey: "created_at",
-    header: "Uploaded",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Uploaded At
+          {column.getIsSorted() === "asc" && (
+            <ArrowUpIcon className="ml-2 h-4 w-4" />
+          )}
+          {column.getIsSorted() === "desc" && (
+            <ArrowDownIcon className="ml-2 h-4 w-4" />
+          )}
+        </Button>
+      );
+    },
     cell: ({ row }) => {
       return (
         <p>
