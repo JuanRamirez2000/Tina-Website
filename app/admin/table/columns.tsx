@@ -73,6 +73,22 @@ export const columns: ColumnDef<Photos>[] = [
     },
   },
   {
+    accessorKey: "created_at",
+    header: "Uploaded",
+    cell: ({ row }) => {
+      return (
+        <p>
+          {new Date(row.original.created_at).toLocaleDateString("en-us", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+      );
+    },
+  },
+  {
     accessorKey: "tags",
     header: "Tags",
     filterFn: (row, _, filterValue) => {
