@@ -1,19 +1,19 @@
 "use client";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+import { updateImageTags } from "@/app/actions/imageActions";
+import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
-import { Label } from "@radix-ui/react-label";
-import { ChangeEvent, useState } from "react";
+import { UploadApiResponse } from "cloudinary";
+import { CldUploadWidget } from "next-cloudinary";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function NewPhotoControl() {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [imageUploaded, setImageUploaded] = useState<UploadApiResponse | null>(
+    null
+  );
+  const [openConfirmation, setOpenConfirmation] = useState<boolean>(false);
 
   const updateTags = (tagName: string) => {
     if (!selectedTags.includes(tagName)) {
@@ -24,42 +24,61 @@ export default function NewPhotoControl() {
     }
   };
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files) {
-      setSelectedFile(files[0]);
-    }
-  };
-
   return (
-    <Dialog>
-      <DialogTrigger className="w-fit px-4 py-3 bg-slate-50 rounded-xl flex flex-row justify-center gap-2 items-center hover:bg-slate-100 cursor-pointer hover:scale-105 duration-75 transition-all">
-        <p>Add photos</p>
-        <span>
-          <PlusCircleIcon className="h-6 w-6" />
-        </span>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogHeader>Add a photo</DialogHeader>
-        </DialogHeader>
-        <div>
-          <div className="grid w-full max-w-sm items-center gap-1.5">
-            <Label htmlFor="picture">Picture</Label>
-            <Input id="picture" type="file" onChange={handleFileChange} />
-          </div>
+    <>
+      <CldUploadWidget
+        uploadPreset="tinaUpload"
+        onSuccess={(result, { widget }) => {
+          const image = result.info;
+          if (image) {
+            widget.close();
+            setImageUploaded(image as UploadApiResponse);
+            setOpenConfirmation(true);
+          }
+        }}
+      >
+        {({ open }) => {
+          return (
+            <button
+              onClick={() => open()}
+              className="w-fit px-4 py-3 bg-slate-50 rounded-xl flex flex-row justify-center gap-2 items-center hover:bg-slate-100 cursor-pointer hover:scale-105 duration-75 transition-all"
+            >
+              <p>Add photos</p>
+              <span>
+                <PlusCircleIcon className="h-6 w-6" />
+              </span>
+            </button>
+          );
+        }}
+      </CldUploadWidget>
+
+      <Dialog open={openConfirmation} onOpenChange={setOpenConfirmation}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogHeader>Save photo</DialogHeader>
+          </DialogHeader>
           <div className="flex flex-col gap-6">
-            <ul className="flex flex-row gap-2 pt-4">
+            <div className="w-full flex justify-center">
+              <div className="relative w-2/3 h-72">
+                <Image
+                  src={imageUploaded?.url!}
+                  alt="new photo"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            </div>
+            <ul className="flex flex-row justify-around pt-4 w-full">
               <li>
                 <input
                   type="checkbox"
-                  id="street"
+                  id="new_street"
                   className="hidden peer"
-                  value="street"
-                  onChange={() => updateTags("street")}
+                  value="new_street"
+                  onChange={() => updateTags("new_street")}
                 />
                 <label
-                  htmlFor="street"
+                  htmlFor="new_street"
                   className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer "
                 >
                   Street
@@ -68,13 +87,13 @@ export default function NewPhotoControl() {
               <li>
                 <input
                   type="checkbox"
-                  id="portrait"
+                  id="new_portait"
                   className="hidden peer"
-                  value="portrait"
-                  onChange={() => updateTags("portait")}
+                  value="new_portait"
+                  onChange={() => updateTags("new_portait")}
                 />
                 <label
-                  htmlFor="portrait"
+                  htmlFor="new_portait"
                   className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
                 >
                   Portrait
@@ -83,13 +102,13 @@ export default function NewPhotoControl() {
               <li>
                 <input
                   type="checkbox"
-                  id="studio"
+                  id="new_studio"
                   className="hidden peer"
-                  value="studio"
-                  onChange={() => updateTags("studio")}
+                  value="new_studio"
+                  onChange={() => updateTags("new_studio")}
                 />
                 <label
-                  htmlFor="studio"
+                  htmlFor="new_studio"
                   className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
                 >
                   Studio
@@ -98,13 +117,13 @@ export default function NewPhotoControl() {
               <li>
                 <input
                   type="checkbox"
-                  id="boudoir"
+                  id="new_boudoir"
                   className="hidden peer"
-                  value="boudoir"
-                  onChange={() => updateTags("boudoir")}
+                  value="new_boudoir"
+                  onChange={() => updateTags("new_boudoir")}
                 />
                 <label
-                  htmlFor="boudoir"
+                  htmlFor="new_boudoir"
                   className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
                 >
                   Boudoir
@@ -112,14 +131,20 @@ export default function NewPhotoControl() {
               </li>
             </ul>
             <button
-              className="px-3 py-2 bg-sky-200 disabled:bg-slate-200 rounded-lg"
-              disabled={!selectedFile}
+              className="px-3 py-2 bg-sky-200 disabled:bg-slate-200 rounded-lg hover:scale-105"
+              disabled={!imageUploaded?.public_id}
+              onClick={async () => {
+                await updateImageTags(imageUploaded?.public_id!, selectedTags);
+                setOpenConfirmation(false);
+                setImageUploaded(null);
+                setSelectedTags([]);
+              }}
             >
               Submit
             </button>
           </div>
-        </div>
-      </DialogContent>
-    </Dialog>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
