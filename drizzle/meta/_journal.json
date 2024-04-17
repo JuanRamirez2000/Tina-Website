@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1713327443153,
+      "tag": "0000_curved_chronomancer",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1713328193338,
+      "tag": "0001_boring_ma_gnuci",
+      "breakpoints": true
+    }
+  ]
+}

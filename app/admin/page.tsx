@@ -21,10 +21,10 @@ export default async function Page() {
 
   return (
     <section className="w-full min-h-screen flex flex-col lg:flex-row pt-24">
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-1/3">
         <PhotoTable data={data} columns={columns} />
       </div>
-      <div className="w-full lg:w-1/2 flex flex-col gap-4">
+      <div className="w-full lg:w-1/3 flex flex-col gap-4">
         <AdminControls />
         <CoverImageSettings />
       </div>
