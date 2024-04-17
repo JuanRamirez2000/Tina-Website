@@ -33,17 +33,17 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
       <DialogTrigger>
         <PencilSquareIcon className="h-6 w-6 text-emerald-400 cursor-pointer" />
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="max-w-sm">
         <DialogHeader>EditPhoto</DialogHeader>
-        <div className="w-full h-[32rem] relative">
-          <Image
-            src={row.original.url}
-            alt=""
-            fill
-            className="object-cover rounded-lg"
-          />
-        </div>
-        <ul className="flex flex-row gap-2 pt-4">
+        <Image
+          src={row.original.url}
+          alt=""
+          height={0}
+          width={0}
+          sizes="100vw"
+          className="object-cover rounded-lg h-[32rem] w-auto"
+        />
+        <ul className="flex flex-row justify-around pt-4 w-full">
           <li>
             <input
               type="checkbox"

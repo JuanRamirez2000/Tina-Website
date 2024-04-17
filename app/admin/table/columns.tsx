@@ -71,9 +71,10 @@ export const columns: ColumnDef<Photos>[] = [
         <Image
           src={imageUrl}
           alt=""
-          height={75}
-          width={75}
-          className="rounded-md"
+          height={0}
+          width={0}
+          sizes="100vw"
+          className="rounded-md w-32 h-auto"
         />
       );
     },

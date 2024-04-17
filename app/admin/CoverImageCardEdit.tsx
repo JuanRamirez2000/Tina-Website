@@ -38,6 +38,7 @@ export default function CoverImageCardEdit({
           src={coverImageUrl}
           alt="street image"
           className="absolute object-cover rounded-lg"
+          sizes="100vw"
           fill
         />
       </div>
