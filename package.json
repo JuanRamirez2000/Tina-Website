@@ -11,7 +11,6 @@
     "studio": "drizzle-kit studio",
     "migrate": "tsx db/migrate.ts"
   },
-  "type": "module",
   "dependencies": {
     "@clerk/nextjs": "^4.29.12",
     "@egjs/react-grid": "^1.15.2",

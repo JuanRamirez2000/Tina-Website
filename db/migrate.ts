@@ -5,4 +5,4 @@ dotenv.config({
   path: ".env.local",
 });
 
-await migrate(db, { migrationsFolder: "./drizzle" });
+migrate(db, { migrationsFolder: "./drizzle" });
