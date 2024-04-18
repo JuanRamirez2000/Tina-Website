@@ -10,10 +10,15 @@ import {
 import { TrashIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { deleteImage } from "@/app/actions/imageActions";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function DeletePhotoModal({ row }: { row: Row<Photos> }) {
+  const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
+  const router = useRouter();
+
   return (
-    <Dialog>
+    <Dialog open={openDeleteModal} onOpenChange={setOpenDeleteModal}>
       <DialogTrigger>
         <TrashIcon className="h-6 w-6 text-red-400 cursor-pointer" />
       </DialogTrigger>
@@ -29,7 +34,11 @@ export default function DeletePhotoModal({ row }: { row: Row<Photos> }) {
         />
         <button
           className="bg-red-200 rounded-lg px-3 py-2 hover:bg-red-300 duration-75 ease-in hover:scale-105"
-          onClick={async () => await deleteImage(row.original.public_id)}
+          onClick={async () => {
+            await deleteImage(row.original.public_id);
+            setOpenDeleteModal(false);
+            router.refresh();
+          }}
         >
           Delete
         </button>

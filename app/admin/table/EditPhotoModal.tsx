@@ -12,8 +12,10 @@ import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState } from "react";
 import { updateImageTags } from "@/app/actions/imageActions";
+import { useRouter } from "next/navigation";
 
 export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
+  const router = useRouter();
   const [selectedTags, setSelectedTags] = useState<string[]>(
     row.original.tags ? row.original.tags : []
   );
@@ -114,6 +116,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
           onClick={async () => {
             await updateImageTags(row.original.public_id, selectedTags);
             setOpenEditImageModal(false);
+            router.refresh();
           }}
         >
           Save

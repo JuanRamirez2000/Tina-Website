@@ -6,9 +6,11 @@ import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import { UploadApiResponse } from "cloudinary";
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function NewPhotoControl() {
+  const router = useRouter();
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [imageUploaded, setImageUploaded] = useState<UploadApiResponse | null>(
     null
@@ -138,6 +140,7 @@ export default function NewPhotoControl() {
                 setOpenConfirmation(false);
                 setImageUploaded(null);
                 setSelectedTags([]);
+                router.refresh();
               }}
             >
               Submit
