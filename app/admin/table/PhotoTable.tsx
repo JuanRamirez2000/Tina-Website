@@ -54,6 +54,14 @@ export function PhotoTable<TData, TValue>({
       rowSelection,
       columnFilters,
     },
+    initialState: {
+      sorting: [
+        {
+          id: "created_at",
+          desc: true,
+        },
+      ],
+    },
   });
 
   const updateTagsFilter = (tagName: string) => {
