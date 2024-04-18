@@ -22,57 +22,56 @@ export default function Navbar() {
         >
           <li>Home</li>
         </Link>
-        <li className="px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
-          <Menu as="div" className="relative">
-            <Menu.Button className="inline-flex items-center justify-center w-full gap-1">
-              Gallery <ChevronDownIcon className="w-4 h-4" />
-            </Menu.Button>
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-100"
-              enterFrom="transform opacity-0 scale-50"
-              enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="transform opacity-100 scale-100"
-              leaveTo="transform opacity-0 scale-50"
-            >
-              <Menu.Items className="absolute right-0 z-20 w-32 mt-4 origin-top rounded-md shadow-lg text-zinc-900 bg-gradient-to-br from-cyan-200 via-indigo-200 to-rose-200">
-                <Menu.Item>
-                  <Link
-                    href={"/gallery?contentType=street"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
-                  >
-                    Street
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link
-                    href={"/gallery?contentType=portait"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
-                  >
-                    Portait
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link
-                    href={"/gallery?contentType=studio"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
-                  >
-                    Studio
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link
-                    href={"/gallery?contentType=boudoir"}
-                    className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
-                  >
-                    Boudoir
-                  </Link>
-                </Menu.Item>
-              </Menu.Items>
-            </Transition>
-          </Menu>
-        </li>
+        <Menu as="li">
+          <Menu.Button className="inline-flex items-center justify-center w-full gap-1 relative px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300">
+            Gallery <ChevronDownIcon className="w-4 h-4" />
+          </Menu.Button>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-50"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-50"
+          >
+            <Menu.Items className="absolute right-0 z-20 w-32 mt-4 origin-top rounded-md shadow-lg text-zinc-900 bg-gradient-to-br from-cyan-200 via-indigo-200 to-rose-200">
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=street"}
+                  className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
+                >
+                  Street
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=portait"}
+                  className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
+                >
+                  Portait
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=studio"}
+                  className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
+                >
+                  Studio
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link
+                  href={"/gallery?contentType=boudoir"}
+                  className="flex items-center w-full px-2 py-2 transition-all duration-300 rounded-md hover:bg-zinc-50 hover:text-zinc-900 hover:scale-105"
+                >
+                  Boudoir
+                </Link>
+              </Menu.Item>
+            </Menu.Items>
+          </Transition>
+        </Menu>
+
         <Link
           href={"https://www.instagram.com/tinavivix/"}
           target="_blank"
@@ -80,15 +79,16 @@ export default function Navbar() {
         >
           <li>Contact</li>
         </Link>
-        <li
+        <Link
+          href={"/admin"}
           className={
             isAdmin
               ? `px-3.5 py-2 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all hover:scale-105 duration-300`
               : "hidden"
           }
         >
-          <Link href={"/admin"}>Admin</Link>
-        </li>
+          <li>Admin</li>
+        </Link>
       </ul>
       <Menu as="div" className="lg:hidden ">
         <Menu.Button>
