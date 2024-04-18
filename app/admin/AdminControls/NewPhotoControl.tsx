@@ -79,7 +79,7 @@ export default function NewPhotoControl() {
                 />
                 <label
                   htmlFor="new_street"
-                  className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer "
+                  className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer hover:bg-cyan-300 duration-75 ease-in"
                 >
                   Street
                 </label>
@@ -94,7 +94,7 @@ export default function NewPhotoControl() {
                 />
                 <label
                   htmlFor="new_portait"
-                  className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
+                  className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer hover:bg-indigo-300 duration-75 ease-in"
                 >
                   Portrait
                 </label>
@@ -109,7 +109,7 @@ export default function NewPhotoControl() {
                 />
                 <label
                   htmlFor="new_studio"
-                  className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
+                  className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer hover:bg-rose-300 duration-75 ease-in"
                 >
                   Studio
                 </label>
@@ -124,14 +124,14 @@ export default function NewPhotoControl() {
                 />
                 <label
                   htmlFor="new_boudoir"
-                  className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
+                  className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer hover:bg-pink-300 duration-75 ease-in"
                 >
                   Boudoir
                 </label>
               </li>
             </ul>
             <button
-              className="px-3 py-2 bg-sky-200 disabled:bg-slate-200 rounded-lg hover:scale-105"
+              className="px-3 py-2 bg-sky-200 disabled:bg-slate-200 rounded-lg hover:scale-105 hover:bg-sky-300 duration-75 ease-in"
               disabled={!imageUploaded?.public_id}
               onClick={async () => {
                 await addImageTags(imageUploaded?.public_id!, selectedTags);

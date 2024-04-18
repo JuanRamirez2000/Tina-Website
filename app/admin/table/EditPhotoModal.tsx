@@ -55,7 +55,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
             />
             <label
               htmlFor="edit_Street"
-              className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer"
+              className="px-2 py-1 rounded-lg border-2 border-cyan-300 peer-checked:bg-cyan-300 cursor-pointer hover:bg-cyan-300 duration-75 ease-in"
             >
               Street
             </label>
@@ -71,7 +71,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
             />
             <label
               htmlFor="edit_Portait"
-              className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer"
+              className="px-2 py-1 rounded-lg border-2 border-indigo-300 peer-checked:bg-indigo-300 cursor-pointer hover:bg-indigo-300 duration-75 ease-in"
             >
               Portrait
             </label>
@@ -87,7 +87,7 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
             />
             <label
               htmlFor="edit_Studio"
-              className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer"
+              className="px-2 py-1 rounded-lg border-2 border-rose-300 peer-checked:bg-rose-300 cursor-pointer hover:bg-rose-300 duration-75 ease-in"
             >
               Studio
             </label>
@@ -103,14 +103,14 @@ export default function EditPhotoModal({ row }: { row: Row<Photos> }) {
             />
             <label
               htmlFor="edit_boudoir"
-              className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer"
+              className="px-2 py-1 rounded-lg border-2 border-pink-300 peer-checked:bg-pink-300 cursor-pointer hover:bg-pink-300 duration-75 ease-in"
             >
               Boudoir
             </label>
           </li>
         </ul>
         <button
-          className="bg-green-200 rounded-lg px-3 py-2"
+          className="bg-green-200 rounded-lg px-3 py-2 hover:scale-105 hover:bg-green-300 duration-75 ease-in"
           onClick={async () => {
             await updateImageTags(row.original.public_id, selectedTags);
             setOpenEditImageModal(false);

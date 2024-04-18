@@ -30,3 +30,13 @@ export const updateImageTags = async (cldPublicId: string, tags: string[]) => {
     return { status: "error" };
   }
 };
+
+export const deleteImage = async (cldPublicId: string) => {
+  try {
+    await cloudinary.v2.api.delete_resources([cldPublicId]);
+    return { status: "success" };
+  } catch (err) {
+    console.error(err);
+    return { status: "error" };
+  }
+};
