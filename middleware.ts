@@ -5,5 +5,5 @@ export default authMiddleware({
 });
 
 export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/admin", "/(api|trpc)(.*)"],
+  matcher: ["/admin"],
 };
