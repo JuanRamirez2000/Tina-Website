@@ -1,9 +1,9 @@
 import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
-  publicRoutes: ["/", "/gallery", "/links", "/photo(.*)"],
+  publicRoutes: ["/(.*)"],
 });
 
 export const config = {
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/(api|trpc)(.*)"],
+  matcher: ["/((?!.*\\..*|_next).*)", "/admin", "/(api|trpc)(.*)"],
 };
